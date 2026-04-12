@@ -1,12 +1,13 @@
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import AppRoutes from './routes/index'
+import { Navbar } from './components/layout/_navbar'
 
 function App() {
   return (
     <BrowserRouter>
       {/* <SmoothScrollToTop /> */}
-      {/* <Navbar /> */}
+      <Navbar />
         <AppRoutes />
       {/* <Footer /> */}
     </BrowserRouter>
