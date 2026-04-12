@@ -9,19 +9,32 @@
 
 /* == BACKGROUND == */
 :root {
-  background: linear-gradient(180deg, #FFFFFF, #DBD5FC);
-  background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF, #DBD5FC) no-repeat;
 }
 
+/* Noise layer */
 :root::before {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
-  height: 100vh;
-  background-image: url('./assets/images/design/background/scratched_Texture_Transparent.png');
-  opacity: 0.3;
+  z-index: -2;
+  opacity: 0.25;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.70' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  background-repeat: repeat;
+}
+
+/* Scratch texture layer */
+:root::after {
+  content: '';
+  position: fixed;
+  inset: 0;
   z-index: -1;
+  background-image: url('./assets/images/design/background/scratched_Texture_Transparent.png');
+  background-size: cover;
+  opacity: 0.4;
 }
 
 /* == FONTS == */

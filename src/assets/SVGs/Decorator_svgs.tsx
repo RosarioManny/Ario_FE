@@ -258,5 +258,4 @@ export const _Decorator_Zigzag_Arrow = ({className = ""}) => (
       </filter>
     </defs>
   </svg>
-
 )
