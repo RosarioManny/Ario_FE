@@ -8,6 +8,7 @@
   transition: border-color 0.3s;
   margin-bottom: 24px;
 
+  
   &:hover {
     border-color: var(--accent-border);
   }
@@ -17,6 +18,24 @@
   }
 }
 
+.animate_decorator {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 1.5s ease-in forwards 
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.comico-test {
+  font-family: 'Comico', sans-serif;
+  letter-spacing: 4px
+}
 .hero {
   position: relative;
 

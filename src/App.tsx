@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import { _Decorator_Smoke_and_Fire, _Decorator_Line, _Decorator_Lips, _Decorator_Paperball, _Decorator_PenNib, _Decorator_Ratears, _Decorator_Samosa, _Decorator_Zigzag_Arrow} from './assets/svg/svgs'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,11 +10,17 @@ function App() {
     <>
       <section id="center">
         <div className="hero">
-          <img src="src/assets/images/personal/decorators/Smoke_and_Fire.svg" className="base" width="170" height="179" alt="" />
-          
+          <_Decorator_Zigzag_Arrow className="animate_decorator" />   
+          <_Decorator_Line className="animate_decorator" />
+          <_Decorator_Smoke_and_Fire className="animate_decorator"/>  
+          <_Decorator_Lips className="animate_decorator"/>
+          <_Decorator_Paperball className="animate_decorator"/>
+          <_Decorator_PenNib className="animate_decorator"/>
+          <_Decorator_Ratears className="animate_decorator"/>
+          <_Decorator_Samosa className="animate_decorator" />      
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1 className='comico-test'>Get started</h1>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
