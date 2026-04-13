@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const Navbar = () => {
+export const DesktopNavbar = () => {
   return (
     <nav className="navbar">
       <Link to="/"> 
@@ -12,9 +12,6 @@ export const Navbar = () => {
       <Link to="/portfolio"> Portfolio </Link>
       <Link to="/faq"> FAQ </Link>
       <Link to="/labs"> Labs </Link>
-      <Link to="/not-found"> Not Found </Link>
-      <Link to="/privacy-policy"> Privacy Policy </Link>
-
     </nav>
   )
 }

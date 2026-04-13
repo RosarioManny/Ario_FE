@@ -1,17 +1,26 @@
 /* FOR GLOBAL STYLES - CONSISTENT STYLES */
 
+@import "tailwindcss";
+@theme {
+  --color-void: #0C1821;
+  --color-rouge: #B23A48;
+  --color-flare: #FFC107;
+  --color-tide: #0277BD;
+  --color-mist: #DBD5FC;
+}
 /* == COLORS == */
-/* DARK-BLUE : #0C1821 */
-/* CRIMSON : #B23A48*/
-/* SUNSHINE : #FFC107 */
-/* CALM : #0277BD */
-/* COOL-WHITE : #DBD5FC */
+/* VOID : #0C1821 */
+/* ROUGE : #B23A48 */
+/* FLARE : #FFC107 */
+/* TIDE : #0277BD */
+/* MIST : #DBD5FC */
 
 /* == BACKGROUND == */
 :root {
   min-height: 100vh;
   position: relative;
   background: linear-gradient(180deg, #FFFFFF, #DBD5FC) no-repeat;
+  padding: 0 1rem;
 }
 
 /* Noise layer */
@@ -50,6 +59,14 @@
 
 /* TEXT */
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comico-Regular', sans-serif;
+}
+
+p {
+  font-family: 'Epoch', sans-serif;
+  color: #0C1821;
+}
 /* CONTAINERS */
 
 
