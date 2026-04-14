@@ -20,11 +20,6 @@ export const MobileNavbar = () => {
     return () => [t1, t2, t3].forEach(clearTimeout)
   }, [])
 
-  useEffect(() => {
-    const timer = setTimeout(() => setHasLoaded(true), 300) // slight delay feels natural
-    return () => clearTimeout(timer)
-  }, [])
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +33,7 @@ export const MobileNavbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  // TODO: Add menu links
   const menuLinks = [
     { name: "contacts" , path: "contacts"},
     { name: "services" , path: "services"},
@@ -46,46 +42,55 @@ export const MobileNavbar = () => {
     { name: "labs" , path: "labs"},
     { name: "faq" , path: "faq"},
   ]
-  // TODO: Add menu links
   return (
   <nav className="mobile-navbar">
-    
-   {/* LOGO */}
+
+    {/* BURGER — top right */}
+    <button 
+      className="
+        flex flex-col justify-center items-center 
+        size-[5rem] 
+        space-y-1 p-2 z-50
+        absolute top-4 right-4 
+        transition-all duration-1000 ease-in-out"
+      onClick={handleMenuToggle}>
+      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={1} />
+      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={2} />
+      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={3} />
+    </button>
+
+    {/* LOGO */}
     <Link to="/">
-      <div className={`fixed transition-all duration-700 ease-in-out flex items-center right-20  
+      <div className={`
+        fixed transition-all duration-700 ease-in-out 
+        flex items-center 
+        right-20 
         ${hasScrolled 
           ? 'top-2 left-2 scale-50 origin-top-left' 
           : 'top-4 left-4 scale-100'
         }`}>
 
         {/* Text slides out from behind */}
-        <h1 className={`comico-font text-4xl text-void whitespace-nowrap absolute left-0 z-0
-          transition-all duration-1000 ease-out animation-delay-1000
-          ${textVisible ? 'translate-x-52 opacity-100' : 'translate-x-45 opacity-0'}`}>
+        <h1 className={`
+          header-text
+          text-4xl text-void absolute left-0 z-0
+          transition-all duration-1000 animation-delay-1000 ease-out
+          ${textVisible ? 'translate-x-59 opacity-100' : 'translate-x-50 opacity-0'}`}>
           <span className="text-6xl">A</span>rio
         </h1>
 
         {/* Pop animation */}
         <img 
-          className={`relative transition-all ease-out size-60
-            ${popStage === 'hidden' ? 'scale-0 duration-0' : ''}
+          className={`relative transition-all ease-out size-72
+            ${popStage === 'hidden' ? 'scale-0 duration-0 opacity-0' : ''}
             ${popStage === 'big'    ? 'scale-125 duration-300' : ''}
-            ${popStage === 'normal' ? 'scale-100 duration-500' : ''}`}
+            ${popStage === 'normal' ? 'scale-100 duration-500 opacity-100' : ''}`}
           src="src/assets/images/design/logo/raining_rose_logo_512x512.png" 
           alt="Logo" 
         />
 
       </div>
     </Link>
-
-    {/* BURGER — top right */}
-    <button 
-      className="z-50 flex flex-col justify-center items-center size-[5rem] space-y-1 p-2 fixed top-4 right-4 transition-all duration-1000 ease-in-out"
-      onClick={handleMenuToggle}>
-      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={1} />
-      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={2} />
-      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={3} />
-    </button>
 
     {/* OFF-SCREEN MENU */}
     <div className={`

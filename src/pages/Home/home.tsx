@@ -1,15 +1,14 @@
+import { LetsChatBtn } from "../../components/ui/buttons/btn_letsChat"
 export const Home = () => {
   return (
-    <main>
-      <div>
-        <h1 className="comico-font">Your next web developer!</h1>
-        <p className="epoch-font">
-          100% Custom Code made by an indie web developer. Authentic, creative & care in every step.
+    <main className="my-32">
+      <div  className="flex flex-col items-center">
+        <h2 className="hero-header-text text-center">Your next web developer!</h2>
+        <p className="epoch-font text-center my-4 opacity-70">
+          100% Custom code made by an indie web developer. Authentic, creative & care in every step.
         </p>
+        <LetsChatBtn />
       </div>
-      <button >
-        Let's Chat
-      </button>
     </main>
   )
 }

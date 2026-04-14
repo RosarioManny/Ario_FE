@@ -6,7 +6,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="m-64 block md:hidden">
+      <div className="my-64 block md:hidden">
         <MobileNavbar />
       </div>   
       <div className="m-48 hidden md:block">
