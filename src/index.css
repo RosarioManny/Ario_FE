@@ -37,10 +37,11 @@
   height: 120%;
   z-index: -2;
   opacity: 0.25;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.1' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); */
   background-repeat: repeat;
   background-size: 256px 256px;
-  animation: noise-drift 60s ease-in-out infinite;
+  animation: noise-drift 75s ease-in-out infinite;
 }
 
 /* Scratch texture layer */
@@ -69,12 +70,12 @@
 .hero-header-text {
   font-family: 'Comico-Regular', sans-serif;
   color: #B23A48;
-  font-size: 2rem;
+  font-size: .5rem;
 }
 
 @media (min-width: 768px) {
   .hero-header-text {
-    font-size: 64px;
+    font-size: 3rem;
   }
 }
 

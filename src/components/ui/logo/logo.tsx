@@ -16,12 +16,12 @@ export const RoseArioLogo = () => {
   }, [])
 
   const leftPosition = isSmall
-    ? 12 : (window.innerWidth / 2) 
+    ? 10 : (window.innerWidth / 2) 
 
-    console.log("LP >> ", leftPosition)
-    console.log("LS >>",logoSize)
+    // console.log("LP >> ", leftPosition)
+    // console.log("LS >>",logoSize)
   const topPosition = isSmall
-    ? 12 : window.innerHeight * 0.18
+    ? 10 : window.innerHeight * 0.18
     
   const textHiddenLeft = logoSize * 0.4
   const textVisibleLeft = logoSize * 0.82
@@ -41,23 +41,23 @@ export const RoseArioLogo = () => {
         <h1
           style={{
             position: 'absolute',
-            left: textVisible && isHome ? textVisibleLeft : textHiddenLeft,
+            left: textVisible ? textVisibleLeft : textHiddenLeft,
             top: '50%',
             transform: 'translateY(-50%)',
-            fontSize: logoSize * 0.18,
-            opacity: textVisible && isHome ? 1 : 0,
+            fontSize: logoSize * 0.3,
+            opacity: textVisible  ? 1 : 0,
             transition: 'all 1000ms ease-out',
             whiteSpace: 'nowrap',
             zIndex: 0,
           }}
           className="header-text text-void">
-          <span style={{ fontSize: logoSize * 0.25 }}>A</span>rio
+          <span style={{ fontSize: logoSize * 0.5 }}>A</span>rio
         </h1>
 
         <img
           style={{
-            width: logoSize,
-            height: logoSize,
+            width: logoSize + 20,
+            height: logoSize + 20,
             position: 'relative',
             zIndex: 10,
             transition: 'all 300ms ease-out',

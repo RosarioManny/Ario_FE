@@ -5,13 +5,13 @@ import { DesktopNavbar } from "./_desktop_navbar"
 export const Navbar = () => {
 
   return (
-    <>
-      <div className="my-64 block md:hidden">
+    <nav className="sticky top-0 z-50">
+      <div className="my-8 block md:hidden">
         <MobileNavbar />
       </div>   
-      <div className="m-48 hidden md:block">
+      <div className="my-8 hidden md:block">
         <DesktopNavbar />
       </div>
-    </>
+    </nav>
   )
 }
