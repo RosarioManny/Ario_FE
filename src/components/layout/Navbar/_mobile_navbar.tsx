@@ -3,6 +3,7 @@ import { Link, useLocation} from "react-router-dom"
 import { _Decorator_Line, _Decorator_PenNib } from "../../../assets/SVGs/Decorator_svgs"
 import { BurgerLine } from "./components/m_nav_burgerLine"
 import { RoseArioLogo } from "../../ui/logo/logo"
+import { RoughBorder } from "../../ui/border/roughBorder"
 
 
 export const MobileNavbar = () => {
@@ -26,19 +27,21 @@ export const MobileNavbar = () => {
   ]
 
   return (
-  <section className="relative w-full flex items-center justify-between ">
+  <section className="relative w-full flex pt-3 items-center justify-between ">
 
     {/* LOGO — left */}
     <RoseArioLogo />
 
     {/* BURGER — right, always above menu overlay */}
-    <button 
-      className="flex flex-col justify-center items-center size-[5rem] space-y-1 p-2 z-[60] relative transition-all duration-1000 ease-in-out"
-      onClick={handleMenuToggle}>
-      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={1} />
-      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={2} />
-      <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={3} />
-    </button>
+    <RoughBorder className="z-[60] relative" fill="white">
+      <button 
+        className="flex rotate-2 flex-col justify-center items-center size-[5rem] space-y-1 p-2  transition-all duration-1000 ease-in-out"
+        onClick={handleMenuToggle}>
+        <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={1} />
+        <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={2} />
+        <BurgerLine strokeWidth={20} isToggled={isMenuOpen} index={3} />
+      </button>
+    </RoughBorder>
 
     {/* OFF-SCREEN MENU — z-50, below burger */}
     <div className={`

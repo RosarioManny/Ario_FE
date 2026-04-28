@@ -24,7 +24,7 @@ export const RoseArioLogo = () => {
     ? 10 : window.innerHeight * 0.18
     
   const textHiddenLeft = logoSize * 0.4
-  const textVisibleLeft = logoSize * 0.82
+  const textVisibleLeft = logoSize * 0.80
 
   return (
     <Link to="/">
@@ -34,7 +34,7 @@ export const RoseArioLogo = () => {
           width: logoSize,
           top: topPosition,
           left: leftPosition,
-          transform: isSmall ? 'translateX(0)' : 'translateX(-75%)',
+          transform: isSmall ? 'translateX(0)' : 'translateX(-95%)',
           transition: 'all 700ms cubic-bezier(0.4, 0, 0.2, 1)',
         }}>
 
@@ -56,8 +56,8 @@ export const RoseArioLogo = () => {
 
         <img
           style={{
-            width: logoSize + 20,
-            height: logoSize + 20,
+            width: logoSize,
+            height: logoSize ,
             position: 'relative',
             zIndex: 10,
             transition: 'all 300ms ease-out',

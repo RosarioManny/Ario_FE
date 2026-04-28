@@ -22,11 +22,16 @@ export const useLogoSize = () => {
   const isSmall = !isHome || hasScrolled
 
 const logoSize = isSmall
-  // windowWidth * scale%, min-size, max-size
-  // Small Corner Logo
-  ? Math.min(Math.max(windowWidth * 0.1, 100), 400)
-  // Large Hero Logo
-  : Math.min(Math.max(windowWidth * 0.50, 300), 400)
+  ? // Small Corner Logo — 4 breakpoints
+    windowWidth >= 1024 ? 120 :  // desktop
+    windowWidth >= 768  ? 110 :  // tablet
+    windowWidth >= 480  ? 100 :  // large phone
+                           80   // small phone
+  : // Large Hero Logo — 4 breakpoints
+    windowWidth >= 1024 ? 400 :  // desktop
+    windowWidth >= 768  ? 350 :  // tablet
+    windowWidth >= 480  ? 300 :  // large phone
+                          200    // small phone
   return { 
     logoSize, 
     isSmall, 
