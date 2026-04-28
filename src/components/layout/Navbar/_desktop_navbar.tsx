@@ -12,7 +12,9 @@ const navLinks = [
 ]
 
 export const DesktopNavbar = () => {
-  const { logoSize } = useLogoSize()
+  const { isHome, hasScrolled } = useLogoSize()
+
+  const btnVisible = !isHome || hasScrolled
 
   return (
     <section
@@ -29,14 +31,12 @@ export const DesktopNavbar = () => {
 
       {/* Col 2 — nav, centered in its column */}
       <div className="flex justify-center ">
-        <RoughBorder fill="#DBD5FC" className="flex px-5 py-2">
+        <RoughBorder fill="#DBD5FC" className="flex px-5 py-3">
           <nav className="flex gap-1 md:gap-2">
             {navLinks.map(({ name, path }) => (
               <div
                 key={path}
-                className="transition-all duration-100 ease-in-out
-                  hover:-translate-y-1 hover:drop-shadow-[-3px_6px_0px_rgba(0,0,0,0.5)] 
-                  focus-within:-translate-y-1 focus-within:drop-shadow-[4px_4px_0px_rgba(0,0,0,0.5)]"
+                className="btn-pop"
               >
                 <RoughBorder fill="white" className="px-2 py-2">
                   <Link
@@ -55,7 +55,14 @@ export const DesktopNavbar = () => {
       </div>
 
       {/* Col 3 — CTA, fixed 160px wide */}
-      <div className="flex justify-center mx-5">
+      <div
+        className="flex justify-start mx-auto transition-all duration-700 ease-in-out"
+        style={{
+          opacity: btnVisible ? 1 : 0,
+          transform: btnVisible ? 'translateX(0)' : 'translateX(40px)',
+          pointerEvents: btnVisible ? 'auto' : 'none',
+        }}
+      >
         <LetsChatBtn />
       </div>
     </section>
