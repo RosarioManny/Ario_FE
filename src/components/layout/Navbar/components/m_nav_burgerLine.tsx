@@ -7,7 +7,7 @@ interface BurgerProps {
   className?: string;
 }
 
-export const BurgerLine = ({isToggled, index, strokeWidth, className = ""}: BurgerProps) => {
+export const BurgerLine = ({isToggled, index, strokeWidth = 20, className = ""}: BurgerProps) => {
   const baseClass = `${className} duration-300 ease-in-out transition-all ${isToggled ? 'text-rouge' : 'text-void'}`
   const transformClass = [
     isToggled ? "rotate-45 translate-y-3" : "",
@@ -17,7 +17,7 @@ export const BurgerLine = ({isToggled, index, strokeWidth, className = ""}: Burg
   return (
     <_Decorator_Line 
       aria-label={`Burger line ${index}`} 
-      strokeWidth={strokeWidth} 
+      strokeWidth={!isToggled ? strokeWidth : strokeWidth } 
       className={`${baseClass} ${transformClass[index - 1]}`}
     />
   )

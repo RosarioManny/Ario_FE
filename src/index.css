@@ -20,7 +20,7 @@
   min-height: 100vh;
   position: relative;
   background: linear-gradient(180deg, #FFFFFF, #DBD5FC) no-repeat;
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 
 /* Noise layer */
@@ -73,6 +73,12 @@
   font-size: 2.5rem;
 }
 
+.header-text {
+  font-family: 'Comico-Regular', sans-serif;
+  color: #0C1821;
+  font-size: 3.5rem;
+}
+
 @media (min-width: 768px) {
   .hero-header-text {
     font-size: 3rem;
@@ -86,7 +92,6 @@
 
 h2, h3, h4, h5, h6 {
   font-family: 'Comico-Regular', sans-serif;
-  letter-spacing: 4px;
 }
 
 p {
@@ -110,7 +115,7 @@ p {
 .animate_decorator {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  animation: dash 1.5s ease-in forwards 
+  animation: dash .55s ease-out forwards 
 }
 
 @keyframes dash {

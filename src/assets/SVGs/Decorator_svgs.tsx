@@ -194,7 +194,7 @@ export const _Decorator_Samosa = ({className = "", strokeWidth =6}) => (
   </svg>
 )
 
-export const _Decorator_Line = ({className = "", strokeWidth = 6}) => (
+export const _Decorator_Line = ({className = "", strokeWidth = 2}) => (
   <svg 
     className={className} 
     viewBox="0 0 316 33" 
@@ -210,11 +210,11 @@ export const _Decorator_Line = ({className = "", strokeWidth = 6}) => (
       <filter id="filter0_g_211_743" x="0" y="0" width="316.005" height="32.4255" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
       <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="9034" />
-      <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
-      <feMerge result="effect1_texture_211_743">
-      <feMergeNode in="displacedImage"/>
-      </feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" seed="9034" />
+      <feDisplacementMap in="shape" scale="10" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_211_743">
+          <feMergeNode in="displacedImage"/>
+        </feMerge>
       </filter>
     </defs>
   </svg>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { RoseArioLogo } from "../../ui/logo/logo"
+import { Animated_RoseArioLogo} from "../../ui/logo/animated_logo"
 import { RoughBorder } from "../../ui/border/roughBorder"
 import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
 import { LetsChatBtn } from "../../ui/buttons/btn_letsChat"
@@ -26,7 +26,7 @@ export const DesktopNavbar = () => {
     >
       {/* Col 1 — logo lives here, no longer fixed */}
       <div className="flex items-center">
-        <RoseArioLogo />
+        <Animated_RoseArioLogo />
       </div>
 
       {/* Col 2 — nav, centered in its column */}

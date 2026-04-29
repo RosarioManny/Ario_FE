@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
-export const RoseArioLogo = () => {
+export const Animated_RoseArioLogo = () => {
   const { logoSize, isSmall, isHome } = useLogoSize()
 
   const [popStage, setPopStage] = useState<'hidden' | 'big' | 'normal'>('hidden')
@@ -16,15 +16,14 @@ export const RoseArioLogo = () => {
   }, [])
 
   const leftPosition = isSmall
-    ? 10 : (window.innerWidth / 2) 
+    ? 16 : (window.innerWidth / 2) 
 
-    // console.log("LP >> ", leftPosition)
-    // console.log("LS >>",logoSize)
+
   const topPosition = isSmall
-    ? 10 : window.innerHeight * 0.18
+    ? 32 : window.innerHeight * 0.18
     
   const textHiddenLeft = logoSize * 0.4
-  const textVisibleLeft = logoSize * 0.80
+  const textVisibleLeft = logoSize * 0.83
 
   return (
     <Link to="/">
@@ -34,7 +33,7 @@ export const RoseArioLogo = () => {
           width: logoSize,
           top: topPosition,
           left: leftPosition,
-          transform: isSmall ? 'translateX(0)' : 'translateX(-95%)',
+          transform: isSmall ? 'translateX(0) ' : 'translateX(-95%)',
           transition: 'all 700ms cubic-bezier(0.4, 0, 0.2, 1)',
         }}>
 
