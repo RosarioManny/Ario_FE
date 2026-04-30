@@ -23,10 +23,7 @@ export const useLogoSize = () => {
 
 const logoSize = isSmall
   ? // Small Corner Logo — 4 breakpoints
-    windowWidth >= 1024 ? 120 :  // desktop
-    windowWidth >= 768  ? 110 :  // tablet
-    windowWidth >= 480  ? 100 :  // large phone
-                           80   // small phone
+    windowWidth >= 769  ? 120 : 100 // tablet / large phone / small
   : // Large Hero Logo — 4 breakpoints
     windowWidth >= 1024 ? 400 :  // desktop
     windowWidth >= 768  ? 350 :  // tablet

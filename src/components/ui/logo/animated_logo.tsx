@@ -4,7 +4,7 @@ import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
 export const Animated_RoseArioLogo = () => {
   const { logoSize, isSmall, isHome } = useLogoSize()
-
+  const windowWidth = window.innerWidth
   const [popStage, setPopStage] = useState<'hidden' | 'big' | 'normal'>('hidden')
   const [textVisible, setTextVisible] = useState(false)
 
@@ -15,12 +15,14 @@ export const Animated_RoseArioLogo = () => {
     return () => [t1, t2, t3].forEach(clearTimeout)
   }, [])
 
+  
   const leftPosition = isSmall
-    ? 16 : (window.innerWidth / 2) 
+    ? windowWidth >= 768 ? -56 : 0  // desktop+tablet : mobile
+    : window.innerWidth / 2  
 
 
   const topPosition = isSmall
-    ? 32 : window.innerHeight * 0.18
+    ? 0 : window.innerHeight * 0.18
     
   const textHiddenLeft = logoSize * 0.4
   const textVisibleLeft = logoSize * 0.83
@@ -29,7 +31,8 @@ export const Animated_RoseArioLogo = () => {
     <Link to="/">
       <div
         style={{
-          position: 'fixed',
+        
+          position: isSmall ? 'relative' : 'fixed',  
           width: logoSize,
           top: topPosition,
           left: leftPosition,

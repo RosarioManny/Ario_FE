@@ -12,59 +12,58 @@ const navLinks = [
 ]
 
 export const DesktopNavbar = () => {
+  const { logoSize } = useLogoSize()
   const { isHome, hasScrolled } = useLogoSize()
 
   const btnVisible = !isHome || hasScrolled
 
   return (
-    <section
-      className="w-full items-center pt-12"
-      style={{ 
-        display: 'grid',
-        gridTemplateColumns: `1fr 1fr 1fr`
-      }}
-    >
-      {/* Col 1 — logo lives here, no longer fixed */}
-      <div className="flex items-center">
-        <Animated_RoseArioLogo />
-      </div>
+  <section
+  className={`w-full items-center  mx-auto pt-12`}
+  style={{
+    display: 'grid',
+    gridTemplateColumns: `1fr 1fr 1fr`,
+  }}
+>
+  {/* Col 1 — logo */}
+  <div className="flex justify-center items-center">
+    <Animated_RoseArioLogo />
+  </div>
 
-      {/* Col 2 — nav, centered in its column */}
-      <div className="flex justify-center ">
-        <RoughBorder fill="#DBD5FC" className="flex px-5 py-3">
-          <nav className="flex gap-1 md:gap-2">
-            {navLinks.map(({ name, path }) => (
-              <div
-                key={path}
-                className="btn-pop"
+  {/* Col 2 — nav centered */}
+  <div className="flex justify-center">
+    <RoughBorder fill="#DBD5FC" className="flex px-2 md:px-4 py-2 md:py-3">
+      <nav className="flex gap-1">
+        {navLinks.map(({ name, path }) => (
+          <div key={path} className="btn-pop">
+            <RoughBorder fill="white" className="px-1 md:px-2 py-1 md:py-2">
+              <Link
+                to={path}
+                className="comico-font py-1 px-1 md:px-2 lg:px-3
+                  text-[10px] md:text-xs lg:text-sm 
+                  tracking-tight md:tracking-wide
+                  uppercase whitespace-nowrap"
               >
-                <RoughBorder fill="white" className="px-2 py-2">
-                  <Link
-                    to={path}
-                    className="comico-font px-2 md:px-3 py-1
-                      text-xs md:text-sm tracking-wide
-                      uppercase whitespace-nowrap"
-                  >
-                    {name}
-                  </Link>
-                </RoughBorder>
-              </div>
-            ))}
-          </nav>
-        </RoughBorder>
-      </div>
+                {name}
+              </Link>
+            </RoughBorder>
+          </div>
+        ))}
+      </nav>
+    </RoughBorder>
+  </div>
 
-      {/* Col 3 — CTA, fixed 160px wide */}
-      <div
-        className="flex justify-start mx-auto transition-all duration-700 ease-in-out"
-        style={{
-          opacity: btnVisible ? 1 : 0,
-          transform: btnVisible ? 'translateX(0)' : 'translateX(40px)',
-          pointerEvents: btnVisible ? 'auto' : 'none',
-        }}
-      >
-        <LetsChatBtn />
-      </div>
-    </section>
+  {/* Col 3 — CTA */}
+  <div
+    className="flex justify-center transition-all duration-700 ease-in-out"
+    style={{
+      opacity: btnVisible ? 1 : 0,
+      transform: btnVisible ? 'translateX(0)' : 'translateX(40px)',
+      pointerEvents: btnVisible ? 'auto' : 'none',
+    }}
+  >
+    <LetsChatBtn />
+  </div>
+</section>
   )
 }
