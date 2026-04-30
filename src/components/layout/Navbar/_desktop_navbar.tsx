@@ -12,7 +12,7 @@ const navLinks = [
 ]
 
 export const DesktopNavbar = () => {
-  const { logoSize } = useLogoSize()
+  // const { logoSize } = useLogoSize()
   const { isHome, hasScrolled } = useLogoSize()
 
   const btnVisible = !isHome || hasScrolled

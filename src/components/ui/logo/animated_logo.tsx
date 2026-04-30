@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
 export const Animated_RoseArioLogo = () => {
-  const { logoSize, isSmall, isHome } = useLogoSize()
+  const { logoSize, isSmall } = useLogoSize()
   const windowWidth = window.innerWidth
   const [popStage, setPopStage] = useState<'hidden' | 'big' | 'normal'>('hidden')
   const [textVisible, setTextVisible] = useState(false)

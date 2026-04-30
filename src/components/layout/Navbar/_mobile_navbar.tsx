@@ -4,13 +4,13 @@ import { _Decorator_Line, _Decorator_PenNib } from "../../../assets/SVGs/Decorat
 import { BurgerLine } from "./components/m_nav_burgerLine"
 import { Animated_RoseArioLogo } from "../../ui/logo/animated_logo"
 import { RoughBorder } from "../../ui/border/roughBorder"
-import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
+// import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
 
 
 export const MobileNavbar = () => {
   // TODO: Open menu on click, close on clikc outside
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { logoSize } = useLogoSize()
+  // const { logoSize } = useLogoSize()
   // const location = useLocation()
   // const isHomePage = location.pathname === "/"
 

@@ -5,7 +5,8 @@ interface RoughBorderProps {
   stroke?: string;
   style?: React.CSSProperties;
 }
-export const RoughBorder = ({ style, children, className = "", fill = "transparent", stroke = "#0C1821" }: RoughBorderProps) => (
+
+export const RoughBorder = ({ children, className = "", fill = "transparent", stroke = "#0C1821" }: RoughBorderProps) => (
   <div className={`relative ${className}`}>
     
     <svg 
