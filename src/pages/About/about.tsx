@@ -1,13 +1,10 @@
 import { RoughBorder } from "../../components/ui/border/roughBorder"
 import { _Decorator_Ratears } from "../../assets/SVGs/Decorator_svgs"
 import { useInView } from "../../hooks/Observers/useInView"
+import { bio, socials, techStack } from "./data"
+import { Link } from "react-router-dom"
 
-const bio = [
-  "In 2024, I made a decision that changed everything.",
-  "I was an art teacher — spending my days helping kids see the world creatively, develop their own voice, and express something real. I loved it. But I wanted to build something new for myself, so I did.",
-  "I trained at General Assembly, picked up full-stack development, and quickly realized: building websites isn't that different from making art. Both are about guiding people somewhere, making them feel something, and solving a problem beautifully.",
-  "Now I build custom websites for small businesses — people with real products, real customers, and real stories that deserve to be seen online. My background means I think about design differently than most developers. I care about how things look just as much as how they work.",
-]
+
 
 export const About = () => {
   const { ref, inView } = useInView(0.8)
@@ -16,8 +13,8 @@ export const About = () => {
     <main className="flex flex-col items-center">
 
       <h1 className="header-text text-void text-center px-4 tracking-wide py-6">About Me!</h1>
-
-      <div className="relative w-full">
+      {/* About Me Description & Image */}
+      <section className="relative w-full">
 
         <RoughBorder fill="#B23A48" className="w-full">
           <div className="w-full h-[450px] flex items-center justify-center">
@@ -41,8 +38,23 @@ export const About = () => {
 
           </RoughBorder>
         </div>
-
-      </div>
+      </section>
+      <section aria-label="Socials">
+        {socials.map(({name, icon, url}) => (
+          <Link to={url} target="_blank">
+              <img src={icon} alt={`${name} icon`} className="size-6" />
+          </Link>
+        ))}
+      </section>
+      {/* Tech Stack */}
+      <section aria-label="Tech Stack" className="min-w-[60vw] my-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4">
+        {techStack.map(({name, icon }) => (
+          <RoughBorder fill="white" className="  flex items-center justify-center p-2">
+            <img src={icon} alt={`${name} icon`} className="size-10" />
+            {/* <span>{name}</span> */}
+          </RoughBorder>
+        ))}
+      </section>
     </main>
   )
 }
