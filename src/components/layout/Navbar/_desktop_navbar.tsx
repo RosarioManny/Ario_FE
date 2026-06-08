@@ -18,14 +18,14 @@ export const DesktopNavbar = () => {
 
   return (
   <section
-  className={`w-full items-center  mx-auto pt-12`}
+  className={`w-full items-center justify-center mx-auto pt-12`}
   style={{
     display: 'grid',
     gridTemplateColumns: `1fr 1fr 1fr`,
   }}
 >
   {/* Col 1 — logo */}
-  <div className="flex justify-center items-center">
+  <div className="flex justify-left items-center">
     <Animated_RoseArioLogo />
   </div>
 
