@@ -1,4 +1,4 @@
-import { RoughBorder } from "../border/roughBorder"
+import { RoughBorder } from "../containers/roughBorder"
 import { Link } from "react-router-dom"
 
 export const LetsChatBtn = () => (

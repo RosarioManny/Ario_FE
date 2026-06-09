@@ -3,7 +3,7 @@ import { Link} from "react-router-dom"
 import { _Decorator_Line, _Decorator_PenNib } from "../../../assets/SVGs/Decorator_svgs"
 import { BurgerLine } from "./components/m_nav_burgerLine"
 import { Animated_RoseArioLogo } from "../../ui/logo/animated_logo"
-import { RoughBorder } from "../../ui/border/roughBorder"
+import { RoughBorder } from "../../ui/containers/roughBorder"
 // import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
 
 

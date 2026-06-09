@@ -2,10 +2,8 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
-const LOGO_SIZE = 256
-
 export const Animated_RoseArioLogo_Large = () => {
-  const { hasScrolled } = useLogoSize()
+  const { hasScrolled, logoSize } = useLogoSize()
 
   const [scale, setScale] = useState<'hidden' | 'big' | 'small' | 'normal'>('hidden')
   const [textVisible, setTextVisible] = useState(false)
@@ -34,13 +32,11 @@ export const Animated_RoseArioLogo_Large = () => {
     timers.current = [setTimeout(() => setScale('hidden'), 100)]
   }
 
-  // Play on mount
   useEffect(() => {
     playAnimation()
     return clearTimers
   }, [])
 
-  // Hide when scrolled, reanimate when back at top
   useEffect(() => {
     if (hasScrolled) {
       playOut()
@@ -51,19 +47,19 @@ export const Animated_RoseArioLogo_Large = () => {
 
   return (
     <Link to="/">
-      <div 
-      className="flex items-center justify-start w-full"
-      style={{
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         width: '100%',
-        padding: '0 48px 28px 0',
-        
+        padding: '16px 32px 16px 0'
       }}>
         <img
           src="src/assets/images/design/logo/raining_rose_logo_512x512.png"
           alt="Logo"
           style={{
-            width: LOGO_SIZE,
-            height: LOGO_SIZE,
+            width: logoSize,
+            height: logoSize,
             flexShrink: 0,
             transform:
               scale === 'hidden' ? 'scale(0)' :
@@ -76,7 +72,7 @@ export const Animated_RoseArioLogo_Large = () => {
 
         <h1
           style={{
-            fontSize: LOGO_SIZE * 0.3,
+            fontSize: logoSize * 0.3,
             marginLeft: -32,
             opacity: textVisible ? 1 : 0,
             transform: textVisible ? 'translateX(0)' : 'translateX(-20px)',
@@ -85,7 +81,7 @@ export const Animated_RoseArioLogo_Large = () => {
           }}
           className="header-text text-void"
         >
-          <span style={{ fontSize: LOGO_SIZE * 0.5 }}>A</span>rio
+          <span style={{ fontSize: logoSize * 0.5 }}>A</span>rio
         </h1>
       </div>
     </Link>

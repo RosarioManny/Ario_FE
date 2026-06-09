@@ -10,7 +10,7 @@ export const Navbar = () => {
       <div  className=" md:hidden ">
         <MobileNavbar />
       </div>   
-      <div className="my-8 hidden md:block">
+      <div className="my-6 hidden md:block">
         <DesktopNavbar />
       </div>
     </nav>

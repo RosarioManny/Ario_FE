@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Animated_RoseArioLogo} from "../../ui/logo/animated_logo"
-import { RoughBorder } from "../../ui/border/roughBorder"
+import { RoughBorder } from "../../ui/containers/roughBorder"
 import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
 import { LetsChatBtn } from "../../ui/buttons/btn_letsChat"
 
