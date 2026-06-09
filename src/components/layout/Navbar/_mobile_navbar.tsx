@@ -3,7 +3,7 @@ import { Link} from "react-router-dom"
 import { _Decorator_Line, _Decorator_PenNib } from "../../../assets/SVGs/Decorator_svgs"
 import { BurgerLine } from "./components/m_nav_burgerLine"
 import { Animated_RoseArioLogo } from "../../ui/logo/animated_logo"
-import { RoughBorder } from "../../ui/containers/roughBorder"
+import { RoughBox } from "../../ui/containers/roughBox"
 // import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
 
 
@@ -37,7 +37,7 @@ export const MobileNavbar = () => {
     <Animated_RoseArioLogo />
 
     {/* BURGER — right, always above menu overlay */}
-    <RoughBorder className="z-[60] relative" fill="white">
+    <RoughBox className="z-[60] relative" fill="white">
       <button 
         className="
         flex flex-col justify-center items-center 
@@ -48,7 +48,7 @@ export const MobileNavbar = () => {
         <BurgerLine isToggled={isMenuOpen} index={2} />
         <BurgerLine isToggled={isMenuOpen} index={3} />
       </button>
-    </RoughBorder>
+    </RoughBox>
 
     {/* OFF-SCREEN MENU — z-50, below burger */}
     <div className={`

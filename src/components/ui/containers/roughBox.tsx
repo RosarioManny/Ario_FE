@@ -9,7 +9,7 @@ export interface RoughBoxProps {
   style?: React.CSSProperties
 }
 
-export const RoughBox = ({ children, className = "", fill = "white", stroke = "#0C1821" }: RoughBoxProps) => (
+export const RoughBox = ({ children, className = "", fill = "none", stroke = "#0C1821" }: RoughBoxProps) => (
   <div className={`relative ${className}`}>
     <svg
       className="absolute pointer-events-none"

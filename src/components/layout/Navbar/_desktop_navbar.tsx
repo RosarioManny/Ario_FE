@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Animated_RoseArioLogo} from "../../ui/logo/animated_logo"
-import { RoughBorder } from "../../ui/containers/roughBorder"
+import { RoughBox } from "../../ui/containers/roughBox"
 import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
 import { LetsChatBtn } from "../../ui/buttons/btn_letsChat"
 
@@ -31,11 +31,11 @@ export const DesktopNavbar = () => {
 
   {/* Col 2 — nav centered */}
   <div className="flex justify-center">
-    <RoughBorder fill="#DBD5FC" className="flex px-2 md:px-4 py-2 md:py-3">
+    <RoughBox fill="#DBD5FC" className="flex px-2 md:px-4 py-2 md:py-3">
       <nav className="flex gap-1">
         {navLinks.map(({ name, path }) => (
           <div key={path} className="btn-pop">
-            <RoughBorder fill="white" className="px-1 md:px-2 py-1 md:py-2">
+            <RoughBox fill="white" className="px-1 md:px-2 py-1 md:py-2">
               <Link
                 to={path}
                 className="comico-font py-1 px-1 md:px-2 lg:px-3
@@ -45,11 +45,11 @@ export const DesktopNavbar = () => {
               >
                 {name}
               </Link>
-            </RoughBorder>
+            </RoughBox>
           </div>
         ))}
       </nav>
-    </RoughBorder>
+    </RoughBox>
   </div>
 
   {/* Col 3 — CTA */}

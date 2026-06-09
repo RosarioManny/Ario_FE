@@ -6,7 +6,7 @@ interface RoughBorderProps {
   stroke?: string
   style?: React.CSSProperties
 }
- 
+
 // Border only — SVG renders AFTER children so it sits on top of content
 export const RoughBorder = ({ children, className = "", stroke = "#0C1821" }: RoughBorderProps) => (
   <div className={`relative ${className}`}>

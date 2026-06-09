@@ -1,7 +1,22 @@
 import { useState, useEffect, useRef } from "react";
 import { bookShelf } from "./bookShelfData";
-import { BookCard,} from "./components/BookShelfCard";
+import { BookCard } from "./components/BookShelfCard";
 
+// Single hidden SVG with all filters
+const Filters = () => (
+  <svg width="0" height="0" style={{ position: "absolute" }}>
+    <defs>
+      <filter id="rough-dot">
+        <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="4" seed="5" />
+        <feDisplacementMap in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="rough-arrow">
+        <feTurbulence type="fractalNoise" baseFrequency="0.19" numOctaves="4" seed="7" />
+        <feDisplacementMap in="SourceGraphic" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+)
 
 export const BookshelfCarousel = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -29,60 +44,63 @@ export const BookshelfCarousel = () => {
 
   return (
     <div
-      style={{ width: "100%", userSelect: "none" }}
+      style={{ width: "100%", maxWidth: 320, margin: "0 auto", userSelect: "none" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Single card view */}
-      <div style={{ maxWidth: 320, margin: "0 auto" }}>
-        <BookCard key={currentIdx} book={bookShelf[currentIdx]} />
+      <Filters />
+
+      {/* Arrows — top right */}
+      <div style={{ display: "flex", justifyContent: "flex-end", gap: 8, marginBottom: 8 }}>
+        {[{ dir: "prev", fn: handlePrev }, { dir: "next", fn: handleNext }].map(({ dir, fn }) => (
+          <button
+            key={dir}
+            onClick={fn}
+            style={{
+              width: 36, height: 36,
+              background: "transparent", border: "none",
+              cursor: "pointer", opacity: 0.6,
+              transition: "opacity 200ms",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              filter: "url(#rough-arrow)",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.6")}
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              {dir === "prev"
+                ? <polygon points="15,2 15,18 3,10" fill="#B23A48" />
+                : <polygon points="5,2 5,18 17,10" fill="#B23A48" />
+              }
+            </svg>
+          </button>
+        ))}
       </div>
 
-      {/* Controls */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 16, maxWidth: 320, margin: "16px auto 0" }}>
-        {/* Dots */}
-        <div style={{ display: "flex", gap: 6 }}>
-          {bookShelf.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentIdx(i)}
-              style={{
-                width: i === currentIdx ? 20 : 6,
-                height: 6,
-                borderRadius: 3,
-                border: "none",
-                background: i === currentIdx ? "#e63946" : "#ccc",
-                cursor: "pointer",
-                padding: 0,
-                transition: "all 300ms ease",
-              }}
-            />
-          ))}
-        </div>
+      {/* Card — center */}
+      <BookCard book={bookShelf[currentIdx]} />
 
-        {/* Arrows */}
-        <div style={{ display: "flex", gap: 8 }}>
-          {[{ label: "←", fn: handlePrev }, { label: "→", fn: handleNext }].map(({ label, fn }) => (
-            <button
-              key={label}
-              onClick={fn}
-              style={{
-                width: 36, height: 36, borderRadius: "50%",
-                border: "1.5px solid currentColor", background: "transparent",
-                cursor: "pointer", fontSize: 16, opacity: 0.6,
-                transition: "opacity 200ms", display: "flex",
-                alignItems: "center", justifyContent: "center",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.6")}
-              className="text-void"
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+      {/* Dots — centered below card */}
+      <div style={{ display: "flex", justifyContent: "center", gap: 6, marginTop: 12 }}>
+        {bookShelf.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrentIdx(i)}
+            style={{
+              width: i === currentIdx ? 20 : 8,
+              height: 6,
+              borderRadius: 5,
+              border: "none",
+              background: i === currentIdx ? "#B23A48" : "#0C1821",
+              cursor: "pointer",
+              padding: 0,
+              transition: "all 400ms ease",
+              filter: "url(#rough-dot)",
+            }}
+          />
+        ))}
       </div>
     </div>
   );
