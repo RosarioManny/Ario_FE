@@ -1,3 +1,11 @@
+import { LinkedInSVG, GithubSVG, GoogleSVG } from "../../assets/SVGs/socialIconSvgs"
+ 
+export const socials = [
+  { name: "LinkedIn", icon: LinkedInSVG, url: "https://github.com/RosarioManny" },
+  { name: "GitHub",   icon: GithubSVG,   url: "https://github.com/RosarioManny" },
+  { name: "Google",   icon: GoogleSVG,   url: "https://github.com/RosarioManny" },
+]
+
 export const bio = [
   "In 2024, I made a decision that changed everything.",
   "I was an art teacher — spending my days helping kids see the world creatively, develop their own voice, and express something real. I loved it. But I wanted to build something new for myself, so I did.",
@@ -6,20 +14,14 @@ export const bio = [
 ]
 
 export const techStack = [
-  { name: "TypeScript", icon: "/public/icons/TechStack/Icon_TypeScript.svg"},
-  { name: "Python", icon: "public/icons/TechStack/Icon_Python.png"},
-  { name: "Django", icon: "public/icons/TechStack/Icon_Django.png"},
-  { name: "Stripe", icon: "public/icons/TechStack/Icon_Stripe.png"},
-  { name: "MongoDB", icon: "public/icons/TechStack/Icon_Mongo_DarkGreen.svg"},
+  { name: "TypeScript", icon: "/icons/TechStack/Icon_TypeScript.svg"},
   { name: "PostgreSQL", icon: "public/icons/TechStack/Icon_PostgreSQL.png"},
-  { name: "Tailwind CSS", icon: "/public/icons/TechStack/Icon_Tailwind.png"},
-  { name: "REST API", icon: "/public/icons/TechStack/Icon_RestAPI.png"},
-  { name: "Figma", icon: "public/icons/TechStack/Icon_Figma.png"},
-  { name: "React", icon: "public/icons/TechStack/Icon_React.svg"},
-]
-
-export const socials = [
-  { name: "LinkedIn", icon: "public/icons/Socials/Icon_LinkedIn.svg", url: "https://github.com/RosarioManny" },
-  { name: "GitHub", icon: "public/icons/Socials/Icon_Github.svg", url: "https://github.com/RosarioManny" },
-  { name: "Google", icon: "public/icons/Socials/Icon_Google.svg", url: "https://github.com/RosarioManny" },
+  { name: "Tailwind CSS", icon: "/icons/TechStack/Icon_Tailwind.png"},
+  { name: "React", icon: "/icons/TechStack/Icon_React.svg"},
+  { name: "Stripe", icon: "/icons/TechStack/Icon_Stripe.png"},
+  { name: "Python", icon: "/icons/TechStack/Icon_Python.png"},
+  { name: "Django", icon: "/icons/TechStack/Icon_Django.png"},
+  { name: "MongoDB", icon: "/icons/TechStack/Icon_Mongo_DarkGreen.svg"},
+  { name: "Figma", icon: "/icons/TechStack/Icon_Figma.png"},
+  { name: "REST API", icon: "/icons/TechStack/Icon_RestAPI.png"},
 ]

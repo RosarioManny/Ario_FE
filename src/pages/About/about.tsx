@@ -7,6 +7,7 @@ import { BookshelfCarousel } from "../../components/ui/bookshelf/bookshelfCarous
 
 export const About = () => {
   const { ref, inView } = useInView(0.8)
+  const isLargeScreen = window.innerWidth > 738
 
   return (
     <main className="flex flex-col items-center">
@@ -34,18 +35,27 @@ export const About = () => {
         </div>
       </section>
 
-      <section aria-label="Socials">
-        {socials.map(({ name, icon, url }) => (
-          <Link to={url} target="_blank" key={name}>
-            <img src={icon} alt={`${name} icon`} className="size-6" />
+      <section className="flex gap-4 my-16 items-center" aria-label="Socials">
+        {socials.map(({ name, icon: Icon, url }) => (
+          <Link className="" to={url} target="_blank" key={name}>
+            <Icon className={`${name === "GitHub" ? "size-16" : "size-12"} small-btn-pop text-void hover:text-rouge transition-all`}/>
           </Link>
         ))}
       </section>
 
-      <section aria-label="Tech Stack" className="min-w-[60vw] my-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4">
+      <section 
+        aria-label="Tech Stack" 
+        className="
+        items-center justify-center 
+        min-w-[50vw]
+        grid grid-cols-4 md:grid-cols-5
+        gap-4 px-4  my-12">
         {techStack.map(({ name, icon }) => (
-          <RoughBox key={name} fill="white" className="flex items-center justify-center p-2">
-            <img src={icon} alt={`${name} icon`} className="size-10" />
+          <RoughBox key={name} fill="white" className="aspect-square p-3">
+            <div className="flex items-center justify-start gap-1">
+              <img src={icon} alt={`${name} icon`} className="size-10" />
+              {isLargeScreen && <p className="text-md text-void">{name}</p>}
+            </div>
           </RoughBox>
         ))}
       </section>

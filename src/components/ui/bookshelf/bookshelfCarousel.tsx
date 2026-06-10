@@ -53,7 +53,7 @@ export const BookshelfCarousel = () => {
       <Filters />
 
       {/* Arrows — top right */}
-      <div style={{ display: "flex", justifyContent: "flex-end", gap: 8, marginBottom: 8 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 8, marginBottom: 8 }}>
         {[{ dir: "prev", fn: handlePrev }, { dir: "next", fn: handleNext }].map(({ dir, fn }) => (
           <button
             key={dir}
@@ -62,14 +62,14 @@ export const BookshelfCarousel = () => {
               width: 36, height: 36,
               background: "transparent", border: "none",
               cursor: "pointer", opacity: 0.6,
-              transition: "opacity 200ms",
+              transition: "opacity 300ms",
               display: "flex", alignItems: "center", justifyContent: "center",
               filter: "url(#rough-arrow)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
             onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.6")}
           >
-            <svg width="20" height="20" viewBox="0 0 20 20">
+            <svg width="45" height="45" viewBox="0 0 20 20">
               {dir === "prev"
                 ? <polygon points="15,2 15,18 3,10" fill="#B23A48" />
                 : <polygon points="5,2 5,18 17,10" fill="#B23A48" />

@@ -10,7 +10,7 @@ export interface RoughBoxProps {
 }
 
 export const RoughBox = ({ children, className = "", fill = "none", stroke = "#0C1821" }: RoughBoxProps) => (
-  <div className={`relative ${className}`}>
+  <div className={`relative flex items-center justify-center ${className}`}>
     <svg
       className="absolute pointer-events-none"
       style={{ inset: '-12px', width: 'calc(100% + 24px)', height: 'calc(100% + 24px)' }}
