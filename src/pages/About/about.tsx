@@ -38,7 +38,7 @@ export const About = () => {
       <section className="flex gap-4 my-16 items-center" aria-label="Socials">
         {socials.map(({ name, icon: Icon, url }) => (
           <Link className="" to={url} target="_blank" key={name}>
-            <Icon className={`${name === "GitHub" ? "size-16" : "size-12"} small-btn-pop text-void hover:text-rouge transition-all`}/>
+            <Icon className={`${name === "GitHub" ? "size-16" : "size-12"} text-void hover:text-rouge transition-all`}/>
           </Link>
         ))}
       </section>
@@ -51,7 +51,7 @@ export const About = () => {
         grid grid-cols-4 md:grid-cols-5
         gap-4 px-4  my-12">
         {techStack.map(({ name, icon }) => (
-          <RoughBox key={name} fill="white" className="aspect-square p-3">
+          <RoughBox key={name} fill="white" className="p-3">
             <div className="flex items-center justify-start gap-1">
               <img src={icon} alt={`${name} icon`} className="size-10" />
               {isLargeScreen && <p className="text-md text-void">{name}</p>}

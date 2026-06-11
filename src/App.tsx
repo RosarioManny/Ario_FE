@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import AppRoutes from './routes/index'
 import { Navbar } from './components/layout/Navbar/_navbar'
 import { SmoothScrollToTop } from './hooks/Navigation/SmoothScrollToTop'
+import { Footer } from './components/layout/Footer/_footer'
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <SmoothScrollToTop />
       <Navbar />
         <AppRoutes />
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 
