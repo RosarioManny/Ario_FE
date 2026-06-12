@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
 export const Animated_RoseArioLogo_Large = () => {
-  const { hasScrolled, logoSize } = useLogoSize()
+  const { hasScrolled, logoSize, heroSize} = useLogoSize()
 
   const [scale, setScale] = useState<'hidden' | 'big' | 'small' | 'normal'>('hidden')
   const [textVisible, setTextVisible] = useState(false)
@@ -52,6 +52,7 @@ export const Animated_RoseArioLogo_Large = () => {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
+        minHeight: heroSize,
         padding: '16px 32px 16px 0'
       }}>
         <img

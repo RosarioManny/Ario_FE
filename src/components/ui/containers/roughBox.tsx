@@ -25,6 +25,6 @@ export const RoughBox = ({ children, className = "", fill = "none", stroke = "#0
       <rect x="14" y="14" width="calc(100% - 28px)" height="calc(100% - 28px)"
         fill={fill} stroke={stroke} strokeWidth="4" filter="url(#rough-box)" />
     </svg>
-    <div className="relative z-10">{children}</div>
+    <div className="relative z-10 flex items-center">{children}</div>
   </div>
 )

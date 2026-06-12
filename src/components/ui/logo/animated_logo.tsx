@@ -4,9 +4,13 @@ import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
 const LOGO_SIZE = 128
 
-export const Animated_RoseArioLogo = () => {
+  // --color-void: #0C1821;
+  // --color-rouge: #B23A48;
+  // --color-flare: #FFC107;
+  // --color-tide: #0277BD;
+  // --color-mist: #DBD5FC;
+export const Animated_RoseArioLogo = ({ lightText = false}) => {
   const { isHome, hasScrolled } = useLogoSize()
-
   const [scale, setScale] = useState<'hidden' | 'big' | 'small' | 'normal'>('hidden')
   const [textVisible, setTextVisible] = useState(false)
   const timers = useRef<ReturnType<typeof setTimeout>[]>([])
@@ -15,6 +19,8 @@ export const Animated_RoseArioLogo = () => {
     timers.current.forEach(clearTimeout)
     timers.current = []
   }
+
+  console.log(lightText)
 
   const playAnimation = () => {
     clearTimers()
@@ -65,7 +71,7 @@ export const Animated_RoseArioLogo = () => {
             whiteSpace: 'nowrap',
             zIndex: 0,
           }}
-          className="header-text text-void"
+          className={`header-text ${lightText ? 'text-mist' : 'text-void'}`}
         >
           <span style={{ fontSize: LOGO_SIZE * 0.5 }}>A</span>rio
         </h1>

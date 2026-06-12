@@ -1,4 +1,3 @@
-// hooks/useLogoSize.ts
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
@@ -10,7 +9,7 @@ export const useLogoSize = () => {
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
-    const handleScroll = () => setHasScrolled(window.scrollY > 50)
+    const handleScroll = () => setHasScrolled(window.scrollY > 150)
     window.addEventListener('resize', handleResize)
     window.addEventListener('scroll', handleScroll)
     return () => {
@@ -21,21 +20,28 @@ export const useLogoSize = () => {
 
   const isSmall = !isHome || hasScrolled
 
-const logoSize = isSmall
-  ? // Small Corner Logo — 4 breakpoints
-    windowWidth >= 769  ? 120 : 100 // tablet / large phone / small
-  : // Large Hero Logo — 4 breakpoints
-    windowWidth >= 1024 ? 400 :  // desktop
-    windowWidth >= 768  ? 350 :  // tablet
-    windowWidth >= 480  ? 300 :  // large phone
-                          200    // small phone
-  return { 
-    logoSize, 
-    isSmall, 
-    isHome, 
+  const logoSize = isSmall
+    ? windowWidth >= 769 ? 120 : 100
+    : windowWidth >= 1024 ? 400
+    : windowWidth >= 768  ? 350
+    : windowWidth >= 480  ? 300
+    : 200
+
+  // Always the large size — never changes on scroll, use for minHeight on the hero wrapper
+  const heroSize =
+    windowWidth >= 1024 ? 400
+    : windowWidth >= 768  ? 350
+    : windowWidth >= 480  ? 300
+    : 200
+
+  return {
+    logoSize,
+    heroSize,
+    isSmall,
+    isHome,
     hasScrolled,
-    windowWidth, 
-    setHasScrolled, 
-    setWindowWidth 
+    windowWidth,
+    setHasScrolled,
+    setWindowWidth,
   }
 }
