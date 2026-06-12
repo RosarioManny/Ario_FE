@@ -4,6 +4,7 @@ import { useInView } from "../../hooks/Observers/useInView"
 import { bio, socials, techStack } from "./data"
 import { Link } from "react-router-dom"
 import { BookshelfCarousel } from "../../components/ui/bookshelf/bookshelfCarousel"
+import { SocialLinks } from "../../components/ui/socials/socialLinks"
 
 export const About = () => {
   const { ref, inView } = useInView(0.8)
@@ -36,11 +37,7 @@ export const About = () => {
       </section>
 
       <section className="flex gap-4 my-16 items-center" aria-label="Socials">
-        {socials.map(({ name, icon: Icon, url }) => (
-          <Link className="" to={url} target="_blank" key={name}>
-            <Icon className={`${name === "GitHub" ? "size-16" : "size-12"} text-void hover:text-rouge transition-all`}/>
-          </Link>
-        ))}
+        <SocialLinks />
       </section>
 
       <section 
