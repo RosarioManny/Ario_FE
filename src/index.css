@@ -20,6 +20,13 @@
   min-height: 100vh;
   position: relative;
   background: linear-gradient(180deg, #FFFFFF, #DBD5FC) no-repeat;
+  /* TEXT Mobile-first */
+  --text-body: 1rem;        /* 16px */
+  --text-subheader: 1.25rem; /* 20px */
+  --text-tertiary: 1.5rem;   /* 24px */
+  --text-secondary: 2rem;    /* 32px */
+  --text-advisory: 2.25rem;  /* 36px */
+  --text-primary: 3rem;      /* 48px */
 }
 
 /* Noise layer */
@@ -64,9 +71,49 @@
   letter-spacing: 2px;
 }
 
-/* TEXT */
 
-.hero-header-text {
+/* TEXT SYSTEM  */ 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comico-Regular', sans-serif;
+}
+
+p {
+  font-family: 'Epoch', sans-serif;
+}
+/* Tablet & Desktop   */
+@media (min-width: 768px) {
+  :root {
+    --text-body: 1.125rem;     /* 18px */
+    --text-subheader: 1.5rem;   /* 24px */
+    --text-tertiary: 1.75rem;   /* 28px */
+    --text-secondary: 2.5rem;   /* 40px */
+    --text-advisory: 2.75rem;   /* 44px */
+    --text-primary: 3.5rem;     /* 56px */
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --text-body: 1.25rem;      /* 20px */
+    --text-subheader: 1.75rem;  /* 28px */
+    --text-tertiary: 2rem;      /* 32px */
+    --text-secondary: 3rem;     /* 48px */
+    --text-advisory: 3.5rem;    /* 56px */
+    --text-primary: 4rem;       /* 64px */
+  }
+}
+
+h1 { font-size: var(--text-primary); }
+h2 { font-size: var(--text-secondary); }
+h3 { font-size: var(--text-tertiary); }
+h4 { font-size: var(--text-subheader); }
+p, li { font-size: var(--text-body); }
+
+.special-text { font-size: var(--text-advisory); 
+}
+
+/* .hero-header-text {
   font-family: 'Comico-Regular', sans-serif;
   color: #B23A48;
   font-size: 2.5rem;
@@ -74,9 +121,12 @@
 
 .header-text {
   font-family: 'Comico-Regular', sans-serif;
-  
   font-size: 3.5rem;
 }
+.subheader-text {
+  font-family: 'Comico-Regular', sans-serif;
+  font-size: 2.5rem;
+} */
 
 @media (min-width: 768px) {
   .hero-header-text {
@@ -84,19 +134,8 @@
   }
 }
 
-.header-text {
-  font-family: 'Comico-Regular', sans-serif;
-  /* color: #0C1821; */
-}
 
-h2, h3, h4, h5, h6 {
-  font-family: 'Comico-Regular', sans-serif;
-}
 
-p {
-  font-family: 'Epoch', sans-serif;
-  
-}
 /* CONTAINERS */
 
 .border-rough {

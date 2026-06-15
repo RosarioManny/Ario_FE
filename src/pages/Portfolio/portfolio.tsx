@@ -1,8 +1,11 @@
 export const Portfolio = () => {
   return (
-    <>
-      <h1>Portfolio</h1>
-      <p>Welcome to our Portfolio page!</p>
-    </>
+    <main>
+      <section>
+        <h1 className="subheader-text ">
+          Portfolio
+        </h1>
+      </section>
+    </main>
   )
 }

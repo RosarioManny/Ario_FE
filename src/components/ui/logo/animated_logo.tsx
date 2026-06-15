@@ -70,6 +70,7 @@ export const Animated_RoseArioLogo = ({ lightText = false}) => {
             transition: 'left 700ms ease-out, opacity 500ms ease-out',
             whiteSpace: 'nowrap',
             zIndex: 0,
+            
           }}
           className={`header-text ${lightText ? 'text-mist' : 'text-void'}`}
         >

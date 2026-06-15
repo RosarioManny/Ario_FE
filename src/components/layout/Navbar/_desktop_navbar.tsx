@@ -31,7 +31,7 @@ export const DesktopNavbar = () => {
 
   {/* Col 2 — nav centered */}
   <div className="flex justify-center">
-    <RoughBox fill="#DBD5FC" className="flex px-2 md:px-4 py-2 md:py-3">
+    <RoughBox fill="#DBD5FC" className="flex ml-10 px-2 md:px-4 py-2 md:py-3">
       <nav className="flex gap-1">
         {navLinks.map(({ name, path }) => (
           <div key={path} className="btn-pop">

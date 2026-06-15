@@ -8,11 +8,7 @@ import { RoughBox } from "../../ui/containers/roughBox"
 
 
 export const MobileNavbar = () => {
-  // TODO: Open menu on click, close on clikc outside
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  // const { logoSize } = useLogoSize()
-  // const location = useLocation()
-  // const isHomePage = location.pathname === "/"
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -29,9 +25,7 @@ export const MobileNavbar = () => {
   ]
 
   return (
-  <section 
-  // style={{ height: logoSize + 20 }}
-  className="relative w-full flex pt-4 items-center justify-between ">
+    <section className="relative w-full flex pt-4 pr-3 items-center justify-between overflow-hidden">
 
     {/* LOGO — left */}
     <Animated_RoseArioLogo />
