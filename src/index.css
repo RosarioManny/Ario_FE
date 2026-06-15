@@ -153,3 +153,7 @@ p, li        { font-size: var(--text-body); }
   transform: translateY(-2px);
   filter: drop-shadow(-2px 4px 0px rgba(60, 0, 0, 0.15));
 }
+
+/* == UTILITIES == */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
