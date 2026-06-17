@@ -33,6 +33,7 @@ export type PortfolioItem = {
   title: string               // Business name
   category: Category[]
   purpose: Purpose[]
+  brandColors?: string[]
 
   // == INTRO ==
   description: string         // Initial description of the service
@@ -62,21 +63,27 @@ export type PortfolioItem = {
 export const PortfolioData: PortfolioItem[] = [
   {
     title: "Nomad Cafe & Eatery",
+    brandColors: ['#FFF6E7', '#BA342C', '#EAA000'], 
     category: ["Restaurant"],
     purpose: ["Online Presence"],
-    description: "A full digital presence build for a local cafe — bringing their menu and brand online for the first time.",
+    description: "A full digital presence build for a local cafe. Bringing their menu, coffee, and brand online for the first time. Allowing for ease of viewing their menu, hours, and story!",
     logoCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_logo.png",
+      src: "/gallery/portfolio/nomadCafe/Nomad-logo-name-transparent-Black.webp",
       alt: "Nomad Cafe & Eatery logo",
     },
     websiteUrl: "https://nomadcafeandeatery.com",
     websiteCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_website.png",
+      src: "/gallery/portfolio/nomadCafe/Tathi_espresso.webp",
       alt: "Nomad Cafe website screenshot",
     },
     showcaseCards: [
-      { src: "src/assets/images/portfolio/nomad/nomad_menu.png", alt: "Nomad digital menu", description: "Interactive digital menu" },
-      { src: "src/assets/images/portfolio/nomad/nomad_mobile.png", alt: "Nomad mobile view", description: "Mobile-first design" },
+      { src: "/gallery/portfolio/nomadCafe/Shop_sign.webp", alt: "Nomad digital menu", description: "Interactive digital menu" },
+      { src: "public/gallery/portfolio/nomadCafe/nomad-café-&-eatery-logo-transparent-bg.webp", alt: "Nomad circle Logo", description: "Mobile-first design" },
+    ],
+    showcaseDescription: "Showcasing their unique energy and vibe the cafe. These help to display the brand image.",
+    miscCards: [
+      { src: "/gallery/portfolio/nomadCafe/Shop_sign.webp", alt: "Nomad digital menu", description: "Interactive digital menu" },
+      { src: "/gallery/portfolio/nomadCafe/Shop_sign.webp", alt: "Nomad digital menu", description: "Interactive digital menu" },
     ],
     testimonial: {
       quote: "We had barely had an online presence. He made sure our communications were constant and easy. Keeping us updated on every step and making sure we understood what was happening. Glad to have worked with him!",
@@ -84,105 +91,5 @@ export const PortfolioData: PortfolioItem[] = [
       role: "Owner",
     },
     ctaLabel: "Let's Chat",
-  },
-  {
-    title: "1 Nomad Cafe & Eatery 1",
-    category: ["Ecommerce"],
-    purpose: ["Online Presence"],
-    description: "A full digital presence build for a local cafe — bringing their menu and brand online for the first time.",
-    logoCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_logo.png",
-      alt: "Nomad Cafe & Eatery logo",
-    },
-    websiteUrl: "https://nomadcafeandeatery.com",
-    websiteCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_website.png",
-      alt: "Nomad Cafe website screenshot",
-    },
-    showcaseCards: [
-      { src: "src/assets/images/portfolio/nomad/nomad_menu.png", alt: "Nomad digital menu", description: "Interactive digital menu" },
-      { src: "src/assets/images/portfolio/nomad/nomad_mobile.png", alt: "Nomad mobile view", description: "Mobile-first design" },
-    ],
-    testimonial: {
-      quote: "We had barely had an online presence. He made sure our communications were constant and easy. Keeping us updated on every step and making sure we understood what was happening. Glad to have worked with him!",
-      author: "Nomad Cafe",
-      role: "Owner",
-    },
-    ctaLabel: "Let's Chat",
-  },
-  {
-    title: "2 Nomad Cafe & Eatery 2",
-    category: ["SaaS"],
-    purpose: ["Online Presence"],
-    description: "A full digital presence build for a local cafe — bringing their menu and brand online for the first time.",
-    logoCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_logo.png",
-      alt: "Nomad Cafe & Eatery logo",
-    },
-    websiteUrl: "https://nomadcafeandeatery.com",
-    websiteCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_website.png",
-      alt: "Nomad Cafe website screenshot",
-    },
-    showcaseCards: [
-      { src: "src/assets/images/portfolio/nomad/nomad_menu.png", alt: "Nomad digital menu", description: "Interactive digital menu" },
-      { src: "src/assets/images/portfolio/nomad/nomad_mobile.png", alt: "Nomad mobile view", description: "Mobile-first design" },
-    ],
-    testimonial: {
-      quote: "We had barely had an online presence. He made sure our communications were constant and easy. Keeping us updated on every step and making sure we understood what was happening. Glad to have worked with him!",
-      author: "Nomad Cafe",
-      role: "Owner",
-    },
-    ctaLabel: "Let's Chat",
-  },
-  {
-    title: "4 Nomad Cafe & Eatery 4",
-    category: ["Blog"],
-    purpose: ["Online Presence"],
-    description: "A full digital presence build for a local cafe — bringing their menu and brand online for the first time.",
-    logoCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_logo.png",
-      alt: "Nomad Cafe & Eatery logo",
-    },
-    websiteUrl: "https://nomadcafeandeatery.com",
-    websiteCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_website.png",
-      alt: "Nomad Cafe website screenshot",
-    },
-    showcaseCards: [
-      { src: "src/assets/images/portfolio/nomad/nomad_menu.png", alt: "Nomad digital menu", description: "Interactive digital menu" },
-      { src: "src/assets/images/portfolio/nomad/nomad_mobile.png", alt: "Nomad mobile view", description: "Mobile-first design" },
-    ],
-    testimonial: {
-      quote: "We had barely had an online presence. He made sure our communications were constant and easy. Keeping us updated on every step and making sure we understood what was happening. Glad to have worked with him!",
-      author: "Nomad Cafe",
-      role: "Owner",
-    },
-    ctaLabel: "Let's Chat",
-  },
-  {
-    title: "3 Nomad Cafe & Eatery 3",
-    category: ["Poster"],
-    purpose: ["Online Presence"],
-    description: "A full digital presence build for a local cafe — bringing their menu and brand online for the first time.",
-    logoCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_logo.png",
-      alt: "Nomad Cafe & Eatery logo",
-    },
-    websiteUrl: "https://nomadcafeandeatery.com",
-    websiteCard: {
-      src: "src/assets/images/portfolio/nomad/nomad_website.png",
-      alt: "Nomad Cafe website screenshot",
-    },
-    showcaseCards: [
-      { src: "src/assets/images/portfolio/nomad/nomad_menu.png", alt: "Nomad digital menu", description: "Interactive digital menu" },
-      { src: "src/assets/images/portfolio/nomad/nomad_mobile.png", alt: "Nomad mobile view", description: "Mobile-first design" },
-    ],
-    testimonial: {
-      quote: "We had barely had an online presence. He made sure our communications were constant and easy. Keeping us updated on every step and making sure we understood what was happening. Glad to have worked with him!",
-      author: "Nomad Cafe",
-      role: "Owner",
-    },
-    ctaLabel: "Let's Chat",
-  },
+  }
 ]

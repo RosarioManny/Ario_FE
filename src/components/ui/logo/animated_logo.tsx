@@ -20,7 +20,7 @@ export const Animated_RoseArioLogo = ({ lightText = false}) => {
     timers.current = []
   }
 
-  console.log(lightText)
+  // console.log(lightText)
 
   const playAnimation = () => {
     clearTimers()

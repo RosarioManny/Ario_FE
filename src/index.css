@@ -130,7 +130,8 @@ p, li        { font-size: var(--text-body); }
 .animate_decorator {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  animation: dash .8s ease-out forwards;
+  animation: dash .8s ease-out forwards ;
+  animation-delay: .5s;
 }
 
 /* == BUTTONS == */

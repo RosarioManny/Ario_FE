@@ -11,17 +11,13 @@ export const PortfolioNav = ({ items, activeIndex, onSelect }: Props) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const activeRef = useRef<HTMLButtonElement>(null)
 
-  // Center the active item on mount and on change
-useEffect(() => {
-  const container = scrollRef.current
-  const activeBtn = activeRef.current
-  if (!container || !activeBtn) return
-
-  container.scrollTo({
-    left: activeBtn.offsetLeft - container.offsetWidth / 2 + activeBtn.offsetWidth / 2,
-    behavior: 'smooth'
-  })
-}, [activeIndex])
+  useEffect(() => {
+    activeRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    })
+  }, [activeIndex])
 
   return (
     <div
@@ -29,7 +25,7 @@ useEffect(() => {
       className="w-full overflow-x-auto scrollbar-hide"
       style={{ WebkitOverflowScrolling: 'touch' }}
     >
-<div className="flex items-center gap-6 min-w-full justify-right whitespace-nowrap" style={{ paddingInline: '50%' }}>
+      <div className="flex items-center justify-center gap-6 w-max mx-auto px-4 whitespace-nowrap">
         {items.map((item, i) => {
           const isActive = i === activeIndex
           return (
@@ -37,9 +33,10 @@ useEffect(() => {
               key={i}
               ref={isActive ? activeRef : null}
               onClick={() => onSelect(i)}
+              style={{ scrollMarginInline: '40vw' }}
               className={`
-                comico-font tracking-wider 
-                transition-all duration-200 text-center flex justify-center items-center gap-1
+                comico-font tracking-wider
+                transition-all duration-200 flex items-center gap-1
                 ${isActive
                   ? "text-rouge scale-110"
                   : "text-void opacity-50 hover:opacity-80"

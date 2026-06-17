@@ -4,17 +4,20 @@ interface RoughBorderProps {
   children: React.ReactNode
   className?: string
   stroke?: string
+  strokeWidth?: number
+  fill?: string
   style?: React.CSSProperties
 }
 
 // Border only — SVG renders AFTER children so it sits on top of content
-export const RoughBorder = ({ children, className = "", stroke = "#0C1821" }: RoughBorderProps) => (
+export const RoughBorder = ({ children, fill='none', strokeWidth = 4, className = "", stroke = "#0C1821" }: RoughBorderProps) => (
   <div className={`relative ${className}`}>
     <div className="relative z-10">{children}</div>
     <svg
       className="absolute pointer-events-none z-20"
       style={{ inset: '-12px', width: 'calc(100% + 24px)', height: 'calc(100% + 24px)' }}
       xmlns="http://www.w3.org/2000/svg"
+      fill={`${fill}`}
     >
       <defs>
         <filter id="rough-border" x="-20%" y="-20%" width="140%" height="140%">
@@ -23,7 +26,7 @@ export const RoughBorder = ({ children, className = "", stroke = "#0C1821" }: Ro
         </filter>
       </defs>
       <rect x="14" y="14" width="calc(100% - 28px)" height="calc(100% - 28px)"
-        fill="none" stroke={stroke} strokeWidth="4" filter="url(#rough-border)" />
+        fill="none" stroke={stroke} strokeWidth={`${strokeWidth}`} filter="url(#rough-border)" />
     </svg>
   </div>
 )
