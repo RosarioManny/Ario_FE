@@ -2,22 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { bookShelf } from "./bookShelfData";
 import { BookCard } from "./components/BookShelfCard";
 
-// Single hidden SVG with all filters
-const Filters = () => (
-  <svg width="0" height="0" style={{ position: "absolute" }}>
-    <defs>
-      <filter id="rough-dot">
-        <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="4" seed="5" />
-        <feDisplacementMap in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-      <filter id="rough-arrow">
-        <feTurbulence type="fractalNoise" baseFrequency="0.19" numOctaves="4" seed="7" />
-        <feDisplacementMap in="SourceGraphic" scale="3" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-  </svg>
-)
-
 export const BookshelfCarousel = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [hovered, setHovered] = useState(false);
@@ -50,9 +34,8 @@ export const BookshelfCarousel = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <Filters />
 
-      {/* Arrows — top right */}
+      
       <div style={{ display: "flex", justifyContent: "space-between", gap: 8, marginBottom: 8 }}>
         {[{ dir: "prev", fn: handlePrev }, { dir: "next", fn: handleNext }].map(({ dir, fn }) => (
           <button

@@ -8,7 +8,7 @@
   --color-rouge: #B23A48;
   --color-flare: #FFC107;
   --color-tide: #0277BD;
-  --color-mist: #DBD5FC;
+  --color-mist: #EFECFF;
 }
 
 /* == ROOT & BACKGROUND == */
@@ -95,17 +95,22 @@
 /* == TEXT SYSTEM == */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Comico-Regular', sans-serif;
+  line-height: 1.3;
 }
 
 p {
   font-family: 'Epoch', sans-serif;
 }
 
-h1           { font-size: var(--text-primary); }
-h2           { font-size: var(--text-secondary); }
-h3           { font-size: var(--text-tertiary); }
-h4           { font-size: var(--text-subheader); }
-p, li        { font-size: var(--text-body); }
+h1           { font-size: var(--text-primary);}
+h2           { font-size: var(--text-secondary);}
+h3           { font-size: var(--text-tertiary);}
+h4           { font-size: var(--text-subheader);}
+
+p, li {
+    font-size: var(--text-body);
+    letter-spacing: 1px;
+  }
 .special-text { font-size: var(--text-advisory); }
 
 /* == CONTAINERS == */

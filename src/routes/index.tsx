@@ -1,8 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import { Home, Contacts, Services, About, Portfolio, FAQ, Labs, NotFound, PrivacyPolicy} from '../pages/index'
+import { SVG_Rough_filter } from '../components/ui/SVGfilter/SVGFilters'
 
 const AppRoutes = () => {
   return (
+    <>
+    <SVG_Rough_filter />
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/contacts' element={<Contacts />} />
@@ -14,6 +17,7 @@ const AppRoutes = () => {
       <Route path='/not-found' element={<NotFound />} />
       <Route path="privacy-policy" element={<PrivacyPolicy />} />
     </Routes>
+    </>
   )
 }
 

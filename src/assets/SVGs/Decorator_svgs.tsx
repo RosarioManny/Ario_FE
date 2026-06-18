@@ -300,3 +300,71 @@ export const _Decorator_External_Link_ = ({className = "", strokeWidth = 6}) => 
     </defs>
   </svg>
 )
+
+export const _Decorator_Checkmark_ = ({className = ""}) => (
+  <svg 
+    width="91" 
+    height="102" 
+    viewBox="0 0 91 102" 
+    fill="none"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_g_372_88)">
+      <path 
+        pathLength="1"
+        d="M8.00073 78.992C15.4256 83.1431 27.5618 90.7248 32.0076 93.0006C33.8288 92.4109 35.0518 90.4847 43.3138 75.5439C51.1601 61.8528 66.4244 35.7582
+        83.0007 8.00061" 
+        stroke="currentColor" 
+        strokeWidth="8" 
+        strokeLinecap="round"/>
+    </g>
+    <defs>
+      <filter id="filter0_g_372_88" x="0" y="0" width="91.0015" height="101.317" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="4187" />
+        <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_372_88">
+          <feMergeNode in="displacedImage"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+)
+
+export const _Decorator_X_Error_ = ({className = ""}) => (
+  <svg 
+    width="91" 
+    height="100" 
+    viewBox="0 0 91 100" 
+    fill="none"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_g_372_91)">
+      <path 
+      pathLength="1"
+      d="M83 8C81.5438 9.61478 80.0875 11.2296 67.74 24.5079C55.3924 37.7862 32.1975 62.6791 8 89.0839" 
+      stroke="currentColor" 
+      strokeWidth="8" 
+      strokeLinecap="round"/>
+      <path 
+      pathLength="1"
+      d="M18.9824 21.4565C20.2673 23.3863 22.9556 27.8299 31.4962 39.9975C37.721 48.8656 48.9515 62.5973 55.9235 71.1472C65.5674 82.4941 68.9256 86.2359 
+      70.2935 88.1012C71.0559 89.1066 71.9568 90.2314 73.1804 91.8903" 
+      stroke="currentColor" 
+      strokeWidth="8" 
+      strokeLinecap="round"/>
+    </g>
+    <defs>
+      <filter id="filter0_g_372_91" x="0" y="0" width="91" height="99.8906" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="4187" />
+        <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_372_91">
+          <feMergeNode in="displacedImage"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+)
