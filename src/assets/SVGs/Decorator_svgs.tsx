@@ -368,3 +368,9 @@ export const _Decorator_X_Error_ = ({className = ""}) => (
     </defs>
   </svg>
 )
+
+export const ArrowSVG = ({ direction = 'right', size = 24, fill = 'currentColor' } ) => (
+  <svg width={size} height={size} viewBox="0 0 20 20" fill={fill}>
+    <polygon points={direction === 'left' ? '15,2 15,18 3,10' : '5,2 5,18 17,10'} />
+  </svg>
+)

@@ -14,14 +14,14 @@ export const About = () => {
     <main className="flex flex-col items-center">
       <h1 className="header-text text-void text-center px-4 tracking-wide py-6">About Me!</h1>
 
-      <section className="relative max-w-[80vw] w-full flex flex-col items-center gap-12">
+      <section className="relative max-w-[90vw] w-full flex flex-col items-center gap-12">
         <RoughBox fill="#B23A48" className="w-full">
           <div className="w-full h-[450px] flex items-center justify-center">
             <span className="text-white">Image of Me</span>
           </div>
         </RoughBox>
 
-        <div className="flex-col flex relative -mt-16 mx-auto max-w-[60vw] z-20">
+        <div className="flex-col flex relative -mt-16 mx-auto max-w-[85vw] z-20">
           <RoughBox fill="white" className="p-6  ">
             <div ref={ref} className="flex items-center gap-2 mb-4">
               <_Decorator_Ratears className={`size-20 text-rouge -rotate-15 ${inView ? 'animate_decorator' : 'opacity-0'}`} />

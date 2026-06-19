@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { bookShelf } from "./bookShelfData";
 import { BookCard } from "./components/BookShelfCard";
+import { ArrowSVG } from "../../../assets/SVGs/Decorator_svgs";
 
 export const BookshelfCarousel = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -34,30 +35,28 @@ export const BookshelfCarousel = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-
-      
       <div style={{ display: "flex", justifyContent: "space-between", gap: 8, marginBottom: 8 }}>
         {[{ dir: "prev", fn: handlePrev }, { dir: "next", fn: handleNext }].map(({ dir, fn }) => (
           <button
             key={dir}
             onClick={fn}
             style={{
-              width: 36, height: 36,
-              background: "transparent", border: "none",
-              cursor: "pointer", opacity: 0.6,
+              width: 36,
+              height: 36,
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              opacity: 0.6,
               transition: "opacity 300ms",
-              display: "flex", alignItems: "center", justifyContent: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
               filter: "url(#rough-arrow)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
             onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.6")}
           >
-            <svg width="45" height="45" viewBox="0 0 20 20">
-              {dir === "prev"
-                ? <polygon points="15,2 15,18 3,10" fill="#B23A48" />
-                : <polygon points="5,2 5,18 17,10" fill="#B23A48" />
-              }
-            </svg>
+            <ArrowSVG direction={dir === "prev" ? "left" : "right"} size={45} fill="#B23A48" />
           </button>
         ))}
       </div>

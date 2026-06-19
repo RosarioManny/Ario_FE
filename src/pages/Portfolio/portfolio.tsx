@@ -1,11 +1,10 @@
 import { useState } from "react"
 import { PortfolioData } from "./data"
-import { _Decorator_PenNib, _Decorator_Line, _Decorator_External_Link_} from "../../assets/SVGs/Decorator_svgs"
+import { _Decorator_Paperball, _Decorator_Line, _Decorator_External_Link_} from "../../assets/SVGs/Decorator_svgs"
 import { PortfolioNav } from "./components/portfolioNavbar"
 import { RoughBorder } from "../../components/ui/containers/roughBorder"
 import { LetsChatBtn } from "../../components/ui/buttons/btn_letsChat"
 
-// Reusable linked image card with hover overlay
 const SiteLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
     href={href}
@@ -40,7 +39,7 @@ export const Portfolio = () => {
       {/* HEADER */}
       <section className="flex flex-col items-center gap-2">
         <div className="flex items-center gap-3">
-          <_Decorator_PenNib className="animate_decorator text-rouge size-16"/>
+          <_Decorator_Paperball className="animate_decorator text-rouge size-16"/>
           <h1 className="header-text text-void uppercase tracking-widest">Projects</h1>
         </div>
         <_Decorator_Line className="animate_decorator w-full h-8" strokeWidth={15} />

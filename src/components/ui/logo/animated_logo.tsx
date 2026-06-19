@@ -58,7 +58,7 @@ export const Animated_RoseArioLogo = ({ lightText = false}) => {
 
   return (
     <Link to="/">
-      <div style={{ position: 'relative', width: LOGO_SIZE }}>
+      <div className="hover:scale-105 transition-scale duration-300 ease-out" style={{ position: 'relative', width: LOGO_SIZE }}>
         <h1
           style={{
             position: 'absolute',

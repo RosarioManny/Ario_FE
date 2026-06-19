@@ -46,7 +46,7 @@ export const Animated_RoseArioLogo_Large = () => {
   }, [hasScrolled])
 
   return (
-    <Link to="/">
+    
       <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -85,6 +85,6 @@ export const Animated_RoseArioLogo_Large = () => {
           <span style={{ fontSize: logoSize * 0.5 }}>A</span>rio
         </h1>
       </div>
-    </Link>
+
   )
 }

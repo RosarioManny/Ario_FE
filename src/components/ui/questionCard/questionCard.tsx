@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { RoughBox } from '../containers/roughBox'
+import { ArrowSVG } from '../../../assets/SVGs/Decorator_svgs'
 
 interface FAQCardProps {
   question: string
@@ -21,8 +22,8 @@ export const FAQCard = ({ question, answer, index }: FAQCardProps) => {
 
   return (
     <RoughBox 
-      fill="#EFECFF"
-      className="w-full"
+      fill={`${isToggled ?  "#EFECFF" : "white"}`}
+      className="w-full hover:scale-102 duration-500 transition-scale"
     >
       <div
         className="flex flex-col w-full"
@@ -31,7 +32,7 @@ export const FAQCard = ({ question, answer, index }: FAQCardProps) => {
       >
         {/* Question Header */}
         <div
-          className="flex justify-between items-center cursor-pointer hover:opacity-50 transition-opacity p-4 gap-4"
+          className="flex justify-between items-center cursor-pointer p-4 gap-4"
           tabIndex={0}
           aria-expanded={isToggled}
           aria-controls={contentId}
@@ -40,15 +41,14 @@ export const FAQCard = ({ question, answer, index }: FAQCardProps) => {
           id={cardId}
           role="button"
         >
-          <h3 className="comico-font text-void font-semibold text-left flex-1">
+          <h3 className="text-void">
             {question}
           </h3>
 
-          
-          {/* Toggle Chevron */}
+          {/* Toggle Arrow */}
           <button
             onClick={() => setIsToggled(!isToggled)}
-            className={`flex items-center justify-center transition-all duration-300 ${
+            className={`flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
               isToggled ? 'text-rouge' : 'text-tide'
             }`}
             style={{
@@ -59,14 +59,12 @@ export const FAQCard = ({ question, answer, index }: FAQCardProps) => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              filter: "url(#rough-arrow)",
+              filter: 'url(#rough-arrow)',
               transform: isToggled ? 'rotate(90deg)' : 'rotate(270deg)',
             }}
             aria-label={isToggled ? "Collapse answer" : "Expand answer"}
           >
-            <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
-              <polygon points="15,2 15,18 3,10" />
-            </svg>
+            <ArrowSVG size={24} />
           </button>
         </div>
 
@@ -79,7 +77,7 @@ export const FAQCard = ({ question, answer, index }: FAQCardProps) => {
           role="region"
           aria-hidden={!isToggled}
         >
-          <div className="epoch-font text-void opacity-70 p-4 border-t-2 border-void">
+          <div className="text-void opacity-70 p-4">
             <p>{answer}</p>
           </div>
         </div>
