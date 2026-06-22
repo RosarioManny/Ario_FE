@@ -105,7 +105,7 @@ export const LandingPage = () => {
       </section>
 
       {/* ============== RESPONSE TIME & TIMELINE ============== */}
-      <section className="w-full max-w-4xl mx-auto px-4 py-12 gap-6 flex flex-col md:flex-row md:justify-around md:items-center">
+      <section className="w-full max-w-4xl mx-auto px-4 py-12 gap-6 flex flex-col md:flex-row md:justify-around items-center">
         <div className="flex flex-col items-center gap-2 text-center">
           <h4 className="comico-font text-4xl text-tide">{RESPONSE_TIME}</h4>
           <p className="epoch-font text-void opacity-70 text-sm">Response time</p>
@@ -159,7 +159,7 @@ export const LandingPage = () => {
         
         <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, idx) => (
-            <RoughBox key={idx} fill="#f5efe6" className="p-6 h-full" align="start">
+            <RoughBox key={idx} fill="white" className="p-6 h-full" align="start">
               <div className="flex flex-col h-full justify-between gap-4">
                 <div>
                   <span className="comico-font text-5xl text-tide leading-none">"</span>
@@ -173,8 +173,8 @@ export const LandingPage = () => {
                   {testimonial.role && (
                     <p className="epoch-font text-sm text-void opacity-60">{testimonial.role}</p>
                   )}
-                  {testimonial.projectName && (
-                    <p className="epoch-font text-xs text-tide opacity-70">{testimonial.projectName}</p>
+                  {testimonial.projectType && (
+                    <p className="epoch-font text-xs text-tide opacity-70">{testimonial.projectType}</p>
                   )}
                 </div>
               </div>

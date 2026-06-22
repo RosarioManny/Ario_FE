@@ -11,7 +11,7 @@ type Testimonial = {
   quote: string
   author: string
   role?: string
-  projectName?: string
+  projectType?: string
 }
 
 type FeaturedProject = {
@@ -59,14 +59,14 @@ export const testimonials: Testimonial[] = [
   {
     quote: "We had barely had an online presence. He made sure our communications were constant and easy. Keeping us updated on every step and making sure we understood what was happening. Glad to have worked with him!",
     author: "Nomad Cafe & Eatery",
-    role: "Owner",
-    projectName: "Restaurant Website"
+    role: "Business Owner",
+    projectType: "Restaurant Website"
   },
   {
     quote: "Professional, creative, and genuinely cares about the final product. Delivered exactly what we needed and communicated throughout.",
-    author: "Client Name",
+    author: "Emilie Cruz",
     role: "Business Owner",
-    projectName: "Project Name"
+    projectType: "Ecommerce custom rugs"
   },
 ]
 
@@ -123,5 +123,5 @@ export const processSteps: ProcessStep[] = [
 // ============================================================
 
 export const RESPONSE_TIME = "2–3 business days"
-export const PROJECT_TIMELINE = "2-6 weeks"
+export const PROJECT_TIMELINE = "2-5 weeks"
 export const VALUE_PROP = "Custom code, honest communication, personal attention"
