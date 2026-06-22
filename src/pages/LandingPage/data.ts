@@ -78,14 +78,14 @@ export const featuredProjects: FeaturedProject[] = [
   {
     title: "Nomad Cafe & Eatery",
     category: "Restaurant & Cafe",
-    image: "public/gallery/portfolio/nomadCafe/Nomad-logo-name-transparent-Black.webp",
+    image: "/gallery/portfolio/nomadCafe/Nomad-logo-name-transparent-Black.webp",
     link: "https://nomadcafeandeatery.com",
     description: "Digital menu & online presence"
   },
   {
     title: "The Rugly Barnacle",
     category: "Ecommerce",
-    image: "public/gallery/portfolio/theruglybarnacle/RuglyBarnacle_Logo.webp",
+    image: "/gallery/portfolio/theruglybarnacle/RuglyBarnacle_Logo.webp",
     link: "https://theruglybarnacle.com",
     description: "Custom store & Online presence"
   },
