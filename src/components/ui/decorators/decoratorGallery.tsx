@@ -3,7 +3,6 @@ import { decoratorListData } from './data'
 
 export const DecoratorGallery = ({ 
   color = "#B23A48", 
-  size = 45, // uniform height for all
   className = ""
 }) => {
   return (
@@ -11,8 +10,8 @@ export const DecoratorGallery = ({
       display: 'flex',
       gap: '1rem',
       alignItems: 'center',
+      padding: '1rem',
       justifyContent: 'center',
-      flexWrap: 'wrap'
     }}>
       {decoratorListData.map(({ component: DecoratorComponent, strokeWidth, optimalSize}, index) => (
         <div 

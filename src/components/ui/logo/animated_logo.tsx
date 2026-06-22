@@ -4,11 +4,6 @@ import { useLogoSize } from '../../../hooks/Logo/useLogoSize'
 
 const LOGO_SIZE = 128
 
-  // --color-void: #0C1821;
-  // --color-rouge: #B23A48;
-  // --color-flare: #FFC107;
-  // --color-tide: #0277BD;
-  // --color-mist: #DBD5FC;
 export const Animated_RoseArioLogo = ({ lightText = false}) => {
   const { isHome, hasScrolled } = useLogoSize()
   const [scale, setScale] = useState<'hidden' | 'big' | 'small' | 'normal'>('hidden')
@@ -57,8 +52,8 @@ export const Animated_RoseArioLogo = ({ lightText = false}) => {
   }, [isHome, hasScrolled])
 
   return (
-    <Link to="/">
-      <div className="hover:scale-105 transition-scale duration-300 ease-out" style={{ position: 'relative', width: LOGO_SIZE }}>
+    <Link className="hover:scale-105 transition-scale duration-300 ease-out " style={{ position: 'relative', width: LOGO_SIZE }} to="/">
+      <div >
         <h1
           style={{
             position: 'absolute',

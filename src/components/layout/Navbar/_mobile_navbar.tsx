@@ -4,7 +4,7 @@ import { _Decorator_Line, _Decorator_PenNib } from "../../../assets/SVGs/Decorat
 import { BurgerLine } from "./components/m_nav_burgerLine"
 import { Animated_RoseArioLogo } from "../../ui/logo/animated_logo"
 import { RoughBox } from "../../ui/containers/roughBox"
-// import { useLogoSize } from "../../../hooks/Logo/useLogoSize"
+import { menuLinks } from "../../../context/navigation/menuLinks"
 
 
 export const MobileNavbar = () => {
@@ -14,15 +14,6 @@ export const MobileNavbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  // TODO: Add menu links
-  const menuLinks = [
-    { name: "Home" , path: ""},
-    { name: "contacts" , path: "contacts"},
-    { name: "services" , path: "services"},
-    { name: "about" , path: "about"},
-    { name: "portfolio" , path: "portfolio"},
-    { name: "labs" , path: "labs"},
-  ]
 
   return (
     <section className="relative w-full flex pt-4 pr-3 items-center justify-between overflow-hidden">
