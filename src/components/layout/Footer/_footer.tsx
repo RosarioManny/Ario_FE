@@ -8,38 +8,39 @@ export const Footer = () => {
   return (
     <footer 
     id="footer"
-    style={{ 
-      marginTop: '64px',
-      background: '#0C1821', 
-      padding: '16px', 
-      color: '#EFECFF', 
-      width: '100%',
-      display: "flex",
-      flexDirection: 'column',
-    }}>
-      <section className="flex">
-        <div>
+    className="mt-16 bg-void text-mist w-full gap-8 flex flex-col"
+    >
+      {/* About, Logo and Quick Links */}
+      <section className="px-4 flex flex-col md:flex-row gap-8">
+        {/* About, Logo, Decorators  - Left Side */}
+        <div className="flex flex-col  gap-8">
           <Animated_RoseArioLogo lightText={true}/>
           <p> NYC-based web designer & developer building secure, custom websites for small businesses.
             Fast, responsive, and built to help you look credible, get found, and grow online.
           </p>
           <DecoratorGallery />
         </div>
-        
-        <ul className="my-8 flex flex-col gap-4">
+        {/* Quick Links - Right Side */}
+        <ul className=" flex flex-col gap-4 py-8">
           {menuLinks.map(({name, path}) => (
-            <li key={path} className="hover:scale-110 list-none transition-scale duration-300 ease-out text-2xl tracking-widest">
-              <Link to={`/${path}`} >
-                <li className="epoch-font">
+            <li key={path} 
+            className="
+            hover:scale-110 transition-scale duration-300 ease-out 
+            list-none 
+            w-full 
+            flex justify-center md:justify-start
+            tracking-widest">
+              <Link className="epoch-font text-left" to={`/${path}`} >
                   {name}
-                </li>
               </Link>
             </li>
           ))}
         </ul>
         
       </section>
-      <section className="flex items-center flex-col md:flex-row justify-between gap-2">
+      <hr style={{ filter: 'url(#rough-dot)'}}  className="border-0 h-1 bg-mist w-full mx-auto" />
+      {/* Socials and Contacts */}
+      <section className="flex items-center flex-col md:flex-row justify-between gap-4">
         <SocialLinks 
           small={true} 
           className="flex items-center justify-center gap-6 mb-4" 
