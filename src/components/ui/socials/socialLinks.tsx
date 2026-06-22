@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { socials } from "./socialsdata"
+import { socials } from "./socialsData"
 
 interface SocialLinksProps {
   className?: string
