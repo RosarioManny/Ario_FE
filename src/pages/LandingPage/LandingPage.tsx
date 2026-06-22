@@ -110,7 +110,8 @@ export const LandingPage = () => {
           <h4 className="comico-font text-4xl text-tide">{RESPONSE_TIME}</h4>
           <p className="epoch-font text-void opacity-70 text-sm">Response time</p>
         </div>
-        <div className="hidden md:block w-1 h-12 bg-rouge " />
+        <hr style={{ filter: 'url(#rough-dot)'}}  className="border-0 h-12 bg-rouge w-1" />
+        {/* <div className="hidden md:block w-1 h-12 bg-rouge " /> */}
         <div className="flex flex-col items-center gap-2 text-center">
           <h4 className="comico-font text-4xl text-tide">{PROJECT_TIMELINE}</h4>
           <p className="epoch-font text-void opacity-70 text-sm">Project timeline</p>
@@ -158,12 +159,15 @@ export const LandingPage = () => {
         
         <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, idx) => (
-            <RoughBox key={idx} fill="#f5efe6" className="p-6">
-              <div className="flex flex-col gap-4">
-                <span className="comico-font text-5xl text-tide leading-none">"</span>
-                <p className="epoch-font text-void opacity-80 italic">
-                  {testimonial.quote}
-                </p>
+            <RoughBox key={idx} fill="#f5efe6" className="p-6 h-full" align="start">
+              <div className="flex flex-col h-full justify-between gap-4">
+                <div>
+                  <span className="comico-font text-5xl text-tide leading-none">"</span>
+                  <p className="epoch-font text-void opacity-80 italic">
+                    {testimonial.quote}
+                  </p>
+                </div>
+                
                 <div className="flex flex-col gap-1 pt-4 border-t border-void">
                   <p className="comico-font text-void font-semibold">{testimonial.author}</p>
                   {testimonial.role && (

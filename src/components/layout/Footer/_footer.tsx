@@ -4,7 +4,12 @@ import { DecoratorGallery } from "../../ui/decorators/decoratorGallery"
 import { menuLinks } from "../../../context/navigation/menuLinks"
 import { Link } from "react-router-dom"
 
-export const Footer = () => {
+interface FooterProps {
+  isOfficialSite: boolean
+}
+
+
+export const Footer = ({ isOfficialSite }: FooterProps) => {
   return (
     <footer 
     id="footer"
@@ -21,7 +26,7 @@ export const Footer = () => {
           <DecoratorGallery />
         </div>
         {/* Quick Links - Right Side */}
-        <ul className=" flex flex-col gap-4 py-8">
+        {isOfficialSite && <ul className=" flex flex-col gap-4 py-8">
           {menuLinks.map(({name, path}) => (
             <li key={path} 
             className="
@@ -35,10 +40,10 @@ export const Footer = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul>}
         
       </section>
-      <hr style={{ filter: 'url(#rough-dot)'}}  className="border-0 h-1 bg-mist w-full mx-auto" />
+      <hr style={{ filter: 'url(#rough-dot)'}}  className="border-0 h-[2px] bg-mist w-full mx-auto" />
       {/* Socials and Contacts */}
       <section className="flex items-center flex-col md:flex-row justify-between gap-4">
         <SocialLinks 

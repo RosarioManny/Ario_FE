@@ -7,13 +7,13 @@ import { SmoothScrollToTop } from './hooks/Navigation/SmoothScrollToTop'
 import { Footer } from './components/layout/Footer/_footer'
 
 function App() {
-  const [isLandingSite] = useState(true)
+  const [isOfficialSite] = useState(false)
   return (
     <BrowserRouter>
       <SmoothScrollToTop />
-      {!isLandingSite && <Navbar />}
-        <AppRoutes isLandingSite={isLandingSite}/>
-      <Footer />
+      {isOfficialSite && <Navbar />}
+        <AppRoutes isOfficialSite={isOfficialSite}/>
+      <Footer isOfficialSite={isOfficialSite}/>
     </BrowserRouter>
   )
 

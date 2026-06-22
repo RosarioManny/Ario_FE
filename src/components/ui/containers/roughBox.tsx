@@ -1,16 +1,20 @@
-// Filled container — SVG renders BEFORE children so fill sits behind content
-import React from "react"
-
 export interface RoughBoxProps {
   children: React.ReactNode
   className?: string
   fill?: string
   stroke?: string
   style?: React.CSSProperties
+  align?: 'center' | 'start' 
 }
 
-export const RoughBox = ({ children, className = "", fill = "none", stroke = "#0C1821" }: RoughBoxProps) => (
-  <div className={`relative flex items-center justify-center ${className}`}>
+export const RoughBox = ({ 
+  children, 
+  className = "", 
+  fill = "none", 
+  stroke = "#0C1821",
+  align = 'center' 
+}: RoughBoxProps) => (
+  <div className={`rough-box relative flex ${align === 'start' ? 'items-start' : 'items-center'} justify-center ${className}`}>
     <svg
       className="absolute pointer-events-none"
       style={{ inset: '-12px', width: 'calc(100% + 24px)', height: 'calc(100% + 24px)' }}
@@ -25,6 +29,6 @@ export const RoughBox = ({ children, className = "", fill = "none", stroke = "#0
       <rect x="14" y="14" width="calc(100% - 28px)" height="calc(100% - 28px)"
         fill={fill} stroke={stroke} strokeWidth="4" filter="url(#rough-box)" />
     </svg>
-    <div className="relative z-10 flex flex-col items-center">{children}</div>
+    <div className="relative z-10 flex flex-col h-full w-full">{children}</div>
   </div>
 )

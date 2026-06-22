@@ -4,13 +4,13 @@ import { SVG_Rough_filter } from '../components/ui/SVGfilter/SVGFilters'
 
 
 interface AppRoutesProps {
-  isLandingSite: boolean
+  isOfficialSite: boolean
 }
-const AppRoutes = ({ isLandingSite }: AppRoutesProps) => {
+const AppRoutes = ({ isOfficialSite }: AppRoutesProps) => {
   return (
     <>
     <SVG_Rough_filter />
-    {isLandingSite ? (
+    {!isOfficialSite ? (
       <Routes>
         <Route path='/' element={<LandingPage />} />
       </Routes>
