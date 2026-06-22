@@ -1,4 +1,4 @@
-export const _Decorator_Smoke_and_Fire = ({className = ""}) => (
+export const _Decorator_Smoke_and_Fire = ({className = "", strokeWidth = 6}) => (
   <svg 
   className={className}
   width="82" height="164" viewBox="0 0 82 164" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,11 +11,7 @@ export const _Decorator_Smoke_and_Fire = ({className = ""}) => (
         79.5391 42.6529 81.8858C36.4184 88.5705 63.5517 93.6658 64.0536 98.7011C64.7446 105.633 47.4411 121.804 28.2716 143.721C20.6429
         152.444 17.9629 156.897 17.2881 156.953C-7.42924 159 19.733 94.7101 22.9837 93.8824C28.1955 97.5523 40.6396 109.526 50.604 118.199C60.5684 
         126.872 67.6762 131.882 74.9993 137.044" 
-      
-        stroke="#B23A48" 
-      
-        strokeWidth="6" 
-      strokeLinecap="round"/>
+        stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round"/>
     </g>
     <defs>
       <filter 
@@ -44,7 +40,7 @@ export const _Decorator_Smoke_and_Fire = ({className = ""}) => (
     </defs>
   </svg>
 )
-export const _Decorator_Lips = ({className = ""}) => (
+export const _Decorator_Lips = ({className = "", strokeWidth = 6}) => (
   <svg 
     className={className}
     width="164" 
@@ -60,7 +56,7 @@ export const _Decorator_Lips = ({className = ""}) => (
         109.139 7.02242 111.381 9.13444C116.952 14.3829 118.796 29.9893 117.734 48.0182C117.109 58.6339 107.404 66.2141 97.3107 74.561C80.0878 
         88.8044 51.56 79.9823 19.4824 69.8113C12.5713 67.62 9.2463 64.2989 7.7832 61.6075C6.3201 58.9161 7.11445 56.1749 8.5278 53.6096C16.9111
         38.3934 45.5973 21.2817 75.0944 12.3248C110.886 13.1979 137.835 18.9959 147.087 22.4407C151.179 23.8201 154.048 24.4511 157.003 25.1011"
-        stroke="#B23A48" strokeWidth="6" strokeLinecap="round"/>
+        stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round"/>
     </g>
     <defs>
       <filter id="filter0_g_125_605" x="0" y="0" width="164.004" height="88.9985" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -75,7 +71,7 @@ export const _Decorator_Lips = ({className = ""}) => (
     </defs>
   </svg>
 )
-export const _Decorator_PenNib = ({className = ""}) => (
+export const _Decorator_PenNib = ({className = "", strokeWidth = 6}) => (
   <svg 
   className={className}
   width="89" 
@@ -91,7 +87,7 @@ export const _Decorator_PenNib = ({className = ""}) => (
       54.5337 71.3586 62.0789 74.0992 66.3703C76.8397 70.6617 75.381 71.2322 71.4477 72.2525C50.4787 77.6921 34.0853 77.1673 25.444 
       76.2792C21.2105 75.8441 32.957 63.1197 45.2702 47.2599C52.5959 37.8242 60.8968 24.6817 66.1494 18.8364C71.402 12.991 73.0451 14.6136 
       75.0897 18.7777C77.1343 22.9418 79.5308 29.5983 81.9999 36.4565" 
-      stroke="#B23A48" strokeWidth="6" strokeLinecap="round"/>
+      stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round"/>
     </g>
     <defs>
       <filter id="filter0_g_125_599" x="0" y="0" width="89.0007" height="86" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -106,7 +102,7 @@ export const _Decorator_PenNib = ({className = ""}) => (
     </defs>
   </svg>
 )
-export const _Decorator_Paperball = ({className = ""}) => (
+export const _Decorator_Paperball = ({className = "", strokeWidth = 6}) => (
   <svg 
     className={className}
     width="89" 
@@ -120,7 +116,7 @@ export const _Decorator_Paperball = ({className = ""}) => (
         d="M81.4357 25.3069C61.4881 30.1942 16.644 41.0951 12.2772 43.4733C1.39624 49.3989 10.0844 77.7097 14.0349 88.9691C16.0414 
         94.6877 44.8319 91.8556 71.6386 80.4597C103.5 66.915 52.097 16.3322 47.9471 7.9025C46.6997 5.3687 44.086 8.63932 43.1369 11.9239C35.2807
         39.114 34.434 79.2548 36.5092 88.3137C42.4169 97.3241 49.2642 102.219 54.3685 103.628C57.0877 104.239 60.069 104.639 68.7393 106" 
-        stroke="#B23A48" strokeWidth="6" strokeLinecap="round"/>
+        stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round"/>
     </g>
     <defs>
       <filter id="filter0_g_125_601" x="0" y="0" width="88.9998" height="113" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -136,7 +132,7 @@ export const _Decorator_Paperball = ({className = ""}) => (
   </svg>
 
 )
-export const _Decorator_Ratears = ({className = ""}) => (
+export const _Decorator_Ratears = ({className = "", strokeWidth = 6}) => (
   <svg 
     className={className}
     width="89" 
@@ -152,7 +148,7 @@ export const _Decorator_Ratears = ({className = ""}) => (
       94.8508 53.7571 86.0337 73.0939 88.3674C76.7906 88.8136 78.2484 89.1499 79.6559 88.6141C81.0633 88.0783 82.3594 86.7822 81.9101 
       83.0502C80.6892 72.9082 73.1066 47.3217 67.3206 16.9187C65.2591 6.08642 65.3534 4.51605 66.0717 10.2059C66.7901 15.8957 68.2268 
       28.8755 68.65 46.7531C69.0731 64.6308 68.4392 87.013 67.3595 103.147C66.2799 119.28 64.7737 128.487 63.222 137.973" 
-      stroke="#B23A48" strokeWidth="6" strokeLinecap="round"/>
+      stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round"/>
     </g>
     <defs>
       <filter id="filter0_g_125_597" x="0" y="0" width="89.0005" height="144.974" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -167,7 +163,7 @@ export const _Decorator_Ratears = ({className = ""}) => (
     </defs>
   </svg>
 )
-export const _Decorator_Samosa = ({className = ""}) => (
+export const _Decorator_Samosa = ({className = "", strokeWidth =6}) => (
   <svg 
   className={className}
   width="89"
@@ -182,7 +178,7 @@ export const _Decorator_Samosa = ({className = ""}) => (
       6.9812 81.9583 10.1624 85.0213C27.565 101.777 56.9864 112.641 66.9257 114.928C72.2038 116.142 70.2232 101.886 69.2599 84.17C67.359 
       49.2098 63.6237 24.2455 60.9803 19.4472C55.1298 8.8272 41.0832 14.6692 37.119 16.1321C35.9759 18.7879 44.3275 39.4397 58.676 
       71.0985C64.8315 83.7774 68.7013 89.5803 72.6883 95.5591" 
-      stroke="#B23A48" strokeWidth="6" strokeLinecap="round"/>
+      stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round"/>
     </g>
     <defs>
       <filter id="filter0_g_125_607" x="0" y="0" width="89.0001" height="121.999" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -198,35 +194,35 @@ export const _Decorator_Samosa = ({className = ""}) => (
   </svg>
 )
 
-export const _Decorator_Line = ({className = ""}) => (
+export const _Decorator_Line = ({className = "", strokeWidth = 2, baseFrequency = .1, numOctaves = 1 }) => (
   <svg 
     className={className} 
-    width="316"
-    height="33" 
     viewBox="0 0 316 33" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_g_211_743)">
-      <path 
+      <path
+        // strokeDashoffset="0"
+        // strokeDasharray="300 1000" 
         pathLength="1" 
         d="M6.50884 25.8926C6.4122 25.9877 6.31557 26.0829 56.5354 23.0185C106.755 19.9541 207.295 13.7273 309.339 6.66663" 
-        stroke="#B23A48" stroke-width="5" stroke-linecap="square"/>
+        stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="square"/>
     </g>
     <defs>
-      <filter id="filter0_g_211_743" x="0" y="0" width="316.005" height="32.4255" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <filter id="filter0_g_211_743" x="0" y="0" width="316.005" height="24" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="9034" />
-      <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
-      <feMerge result="effect1_texture_211_743">
-      <feMergeNode in="displacedImage"/>
-      </feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency={`${baseFrequency}`} numOctaves={`${numOctaves}`} seed="9034" />
+      <feDisplacementMap in="shape" scale="20" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_211_743">
+          <feMergeNode in="displacedImage"/>
+        </feMerge>
       </filter>
     </defs>
   </svg>
 )
 
-export const _Decorator_Zigzag_Arrow = ({className = ""}) => (
+export const _Decorator_Zigzag_Arrow = ({className = "", strokeWidth = 4}) => (
   <svg 
     className={className} 
     width="274" 
@@ -243,7 +239,7 @@ export const _Decorator_Zigzag_Arrow = ({className = ""}) => (
         67.1288C116.209 84.785 112.351 92.7481 114.402 95.3688C116.452 97.9895 124.529 95.0264 149.506 80.5022C174.482 65.9779 216.113
         39.9824 234.851 26.5338C253.589 13.0852 248.172 12.9713 242.302 13.6919C236.432 14.4125 230.274 15.971 227.731 16.8246C226.215 
         17.3336 243.933 11.6859 265.187 6.02808C270.255 6.56878 263.713 14.0365 259.415 19.502C255.116 24.9675 253.259 28.2045 250.283 34.9381" 
-        stroke="#B23A48" strokeWidth="4" strokeLinecap="square"
+        stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="square"
       />
     </g>
     <defs>
@@ -257,5 +253,124 @@ export const _Decorator_Zigzag_Arrow = ({className = ""}) => (
         </feMerge>
       </filter>
     </defs>
+  </svg>
+)
+
+export const _Decorator_External_Link_ = ({className = "", strokeWidth = 6}) => (
+  <svg 
+    width="130" 
+    height="126" 
+    viewBox="0 0 130 126" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    >
+    <g filter="url(#filter0_g_359_79)">
+      <path 
+        d="M91.1506 7C91.1072 7 91.0638 7 96.0554 7C101.047 7 111.075 7 122.417 7.55385" 
+        stroke="currentColor" 
+        strokeWidth={`${strokeWidth}`} 
+        strokeLinecap="round"/>
+      <path 
+        d="M122.29 7.55383V40.5729" 
+        stroke="currentColor" 
+        strokeWidth={`${strokeWidth}`} 
+        strokeLinecap="round"/>
+      <path 
+        d="M122.173 7.41797C122.131 7.45929 122.089 7.5006 117.569 11.566C113.049 15.6314 104.053 23.7196 99.1276 28.1747C93.6212 33.2069 91.4978 35.1571 89.0238 37.4424C88.0742 38.3719 87.7458 38.8341 86.2827 40.1506" 
+        stroke="currentColor" 
+        strokeWidth={`${strokeWidth}`} 
+        strokeLinecap="round"/>
+      <path 
+        d="M56.3779 23.7892C54.1636 23.7892 51.9493 23.7892 43.6235 23.7892C35.2976 23.7892 20.9272 23.7892 13.7074 24.0259C6.48764 24.2626 6.85389 24.736 7.10103 25.4126C7.34818 26.0892 7.46512 26.9548 7.52537 37.687C7.58561 48.4193 7.58561 68.992 7.5548 81.0158C7.52399 93.0396 7.46237 95.8912 7.45618 100.305C7.44999 104.72 7.50111 110.611 8.07471 113.645C8.71788 117.048 15.4819 117.209 24.9981 118.011C29.8933 118.424 34.9618 118.284 42.016 117.616C49.0702 116.947 57.9666 115.61 68.2168 114.819C78.4671 114.029 89.8018 113.824 95.9112 113.69C102.021 113.557 102.561 113.5 102.981 113.141C103.923 112.337 103.978 103.601 103.947 91.4331C103.931 85.2803 103.668 82.786 103.519 75.2431C103.434 73.413 103.264 72.3899 103.106 71.6013C102.948 70.8127 102.808 70.2896 102.664 69.6212" 
+        stroke="currentColor" 
+        strokeWidth={`${strokeWidth}`} 
+        strokeLinecap="round"/>
+    </g>
+    <defs>
+      <filter id="filter0_g_359_79" x="0" y="0" width="129.417" height="125.244" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="896" />
+        <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_359_79">
+        <feMergeNode in="displacedImage"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+)
+
+export const _Decorator_Checkmark_ = ({className = ""}) => (
+  <svg 
+    width="91" 
+    height="102" 
+    viewBox="0 0 91 102" 
+    fill="none"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_g_372_88)">
+      <path 
+        pathLength="1"
+        d="M8.00073 78.992C15.4256 83.1431 27.5618 90.7248 32.0076 93.0006C33.8288 92.4109 35.0518 90.4847 43.3138 75.5439C51.1601 61.8528 66.4244 35.7582
+        83.0007 8.00061" 
+        stroke="currentColor" 
+        strokeWidth="8" 
+        strokeLinecap="round"/>
+    </g>
+    <defs>
+      <filter id="filter0_g_372_88" x="0" y="0" width="91.0015" height="101.317" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="4187" />
+        <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_372_88">
+          <feMergeNode in="displacedImage"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+)
+
+export const _Decorator_X_Error_ = ({className = ""}) => (
+  <svg 
+    width="91" 
+    height="100" 
+    viewBox="0 0 91 100" 
+    fill="none"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_g_372_91)">
+      <path 
+      pathLength="1"
+      d="M83 8C81.5438 9.61478 80.0875 11.2296 67.74 24.5079C55.3924 37.7862 32.1975 62.6791 8 89.0839" 
+      stroke="currentColor" 
+      strokeWidth="8" 
+      strokeLinecap="round"/>
+      <path 
+      pathLength="1"
+      d="M18.9824 21.4565C20.2673 23.3863 22.9556 27.8299 31.4962 39.9975C37.721 48.8656 48.9515 62.5973 55.9235 71.1472C65.5674 82.4941 68.9256 86.2359 
+      70.2935 88.1012C71.0559 89.1066 71.9568 90.2314 73.1804 91.8903" 
+      stroke="currentColor" 
+      strokeWidth="8" 
+      strokeLinecap="round"/>
+    </g>
+    <defs>
+      <filter id="filter0_g_372_91" x="0" y="0" width="91" height="99.8906" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.05000000074505806 0.05000000074505806" numOctaves="3" seed="4187" />
+        <feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+        <feMerge result="effect1_texture_372_91">
+          <feMergeNode in="displacedImage"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+)
+
+export const ArrowSVG = ({ direction = 'right', size = 24, fill = 'currentColor' } ) => (
+  <svg width={size} height={size} viewBox="0 0 20 20" fill={fill}>
+    <polygon points={direction === 'left' ? '15,2 15,18 3,10' : '5,2 5,18 17,10'} />
   </svg>
 )

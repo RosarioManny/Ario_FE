@@ -2,6 +2,11 @@
 
 /* HOME */
 /* CONTACTS */
+input::placeholder,
+textarea::placeholder {
+
+  font-family: comico;
+}
 /* SERVICES */
 /* ABOUT */
 /* PORTFOLIO */
