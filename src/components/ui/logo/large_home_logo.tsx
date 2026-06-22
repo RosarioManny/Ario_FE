@@ -55,7 +55,7 @@ export const Animated_RoseArioLogo_Large = () => {
         padding: '16px 32px 16px 0'
       }}>
         <img
-          src="src/assets/images/design/logo/raining_rose_logo_512x512.png"
+          src="public/icons/logo/raining_rose_logo_512x512.png"
           alt="Logo"
           style={{
             width: logoSize,

@@ -73,7 +73,7 @@ export const Animated_RoseArioLogo = ({ lightText = false}) => {
         </h1>
 
         <img
-          src="src/assets/images/design/logo/raining_rose_logo_512x512.png"
+          src="public/icons/logo/raining_rose_logo_512x512.png"
           alt="Logo"
           style={{
             width: LOGO_SIZE,
