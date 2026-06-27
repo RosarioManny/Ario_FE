@@ -35,7 +35,8 @@ export const PortfolioNav = ({ items, activeIndex, onSelect }: Props) => {
               onClick={() => onSelect(i)}
               style={{ scrollMarginInline: '40vw' }}
               className={`
-                comico-font tracking-wider
+                comico-font tracking-wider cursor-pointer
+                hover:scale-115 focus:scale-115 
                 transition-all duration-200 flex items-center gap-1
                 ${isActive
                   ? "text-rouge scale-110"

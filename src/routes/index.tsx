@@ -25,8 +25,8 @@ const AppRoutes = ({ isOfficialSite }: AppRoutesProps) => {
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='/labs' element={<Labs />} />
-        <Route path='/not-found' element={<NotFound />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
     )}
     </>

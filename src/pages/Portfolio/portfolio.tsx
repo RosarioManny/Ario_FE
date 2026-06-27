@@ -19,7 +19,7 @@ const SiteLink = ({ href, children }: { href: string; children: React.ReactNode 
       opacity-0 group-hover:opacity-100
       group-focus:opacity-100
       transition-opacity duration-200
-      rounded-md z-90
+      rounded-md z-20
     ">
       <h4 className="comico-font flex items-center justify-center gap-4 text-flare tracking-widest text-lg">
         Go to Website <_Decorator_External_Link_ strokeWidth={12} className="size-[20px] md:size-[28px]"/>

@@ -1,9 +1,40 @@
+import { PackageData } from "./data"
 export const Services = () => {
   return (
-    <>
-      <h1>Services</h1>
-      <p>Welcome to our Services page!</p>
-    </>
+    <main>
+      <section aria-label="Lets Work Together - Header">
+        <h1> Let's Work Together </h1>
+      </section>
+      <section aria-label="Services Packages & Pricing"> 
+        <h2> Services</h2>
+        <div>
+          <h3>Packages</h3>
+          TOP
+          <p>
+            Not sure which package fits?  <br/>
+            Prices shown are estimates and every project is unique. Reach out before getting started and we'll figure out exactly what you need. 
+          </p>
+        </div>
+        <div>
+         {PackageData.map(pkg => (
+  <div key={pkg.title}>
+    <h3>{pkg.title}</h3>
+    <p>{pkg.price}</p>
+    <ul>
+      {pkg.includes.map(item => <li key={item}>{item}</li>)}
+    </ul>
+    {pkg.techStack && (
+      <div className="tech-badges">
+        {pkg.techStack.map(tech => (
+          <span key={tech} className="text-red-500 badge">{tech} </span>
+        ))}
+      </div>
+    )}
+  </div>
+))}
+        </div>
+      </section>
+    </main>
   )
 }
 // == Benefits of Custom web development ==
