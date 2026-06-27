@@ -7,7 +7,7 @@ import { SmoothScrollToTop } from './hooks/Navigation/SmoothScrollToTop'
 import { Footer } from './components/layout/Footer/_footer'
 
 function App() {
-  const [isOfficialSite] = useState(false)
+  const [isOfficialSite] = useState(true)
   return (
     <BrowserRouter>
       <SmoothScrollToTop />
